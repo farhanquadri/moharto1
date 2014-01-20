@@ -1,0 +1,25 @@
+.our_associates_maincontainer{
+
+    margin: 0 auto;
+    width: 980px;
+
+
+
+}
+
+.our_associates_leftcontainer{
+
+     float: left;
+
+    width: 68%;
+
+}
+
+.our_associates_rightcontainer{
+    
+    margin-left: 24px;
+    float: left;
+
+    width: 29%;
+    //border: 1px solid #ddd;
+}

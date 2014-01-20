@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+              <h:outputStylesheet library="css" name="css_ads.css"/>
+              <script type="text/javascript">  
+    function start() {  
+        PF('startButton1').disable();  
+  
+        window['progress'] = setInterval(function() {  
+            var pbClient = PF('pbClient'),  
+            oldValue = pbClient.getValue(),  
+            newValue = oldValue + 10;  
+  
+            pbClient.setValue(pbClient.getValue() + 10);  
+  
+            if(newValue === 100) {  
+                clearInterval(window['progress']);  
+            }  
+  
+  
+        }, 1000);  
+    }  
+  
+    function cancel() {  
+        clearInterval(window['progress']);  
+        PF('pbClient').setValue(0);  
+        PF('startButton1').enable();  
+    }  
+</script> 
+    </h:head>
+    <ui:composition template="/template/commonTemplate.xhtml">
+
+        <ui:define name='pageContent'>
+            <h:form>
+                <div class="ads_main">
+                    <div class="one">
+                    <h:outputText value="Advertise in Moharto" style="font-size: 18px;color:#00aeef"/>
+                    <h:panelGrid columns="1" style="margin-left: 44px;
+margin-top: 25px;">
+                      <h:graphicImage value="../resources/images/pages/bbm.png" style="width: 230px;
+                                                height: 418px;
+                                               "/>
+                      <h:panelGrid columns="2" style="margin-left: 47px;">
+                            <p:selectBooleanCheckbox />
+                            <h:outputText value="(230px * 418px)"/>
+                      </h:panelGrid>
+                      
+                        
+                    </h:panelGrid>
+                    <div class="clear"/>
+                    <h:panelGrid columns="1" style="float: right;
+margin-right: 73px;
+margin-top: -455px;">
+                                <h:graphicImage value="../resources/images/pages/bbm1.jpg" style="width: 230px;
+                                                height: 78px;
+                                               "/>
+                                 <h:panelGrid columns="2" style="margin-left: 47px;">
+                            <p:selectBooleanCheckbox />
+                            <h:outputText value="(230px * 78px)"/>
+                      </h:panelGrid>
+
+                                <h:graphicImage value="../resources/images/pages/capture.png" style="
+                                                width: 230px;
+                                                height: 178px;
+                                              "/>
+                                 <h:panelGrid columns="2" style="margin-left: 47px;">
+                            <p:selectBooleanCheckbox />
+                            <h:outputText value="(230px * 178px)"/>
+                      </h:panelGrid>
+                      </h:panelGrid>
+                    <h:panelGrid columns="1" style="margin-left: 44px;
+margin-top: 14px;">
+                         <h:graphicImage value="../resources/images/home/Gradmen.png" style="
+                                               width: 522px;
+height: 84px;
+                                              "/>
+                          <h:panelGrid columns="2" style="margin-left: 179px;;">
+                            <p:selectBooleanCheckbox />
+                            <h:outputText value="(468px * 84px)"/>
+                      </h:panelGrid>
+                      
+<!--                           <h:graphicImage value="../resources/images/home/assam.jpg" style="width: 522px;
+height: 150px;
+                                            
+                                              "/>
+                             <h:panelGrid columns="2" style="margin-left: 179px;;">
+                            <p:selectBooleanCheckbox />
+                            <h:outputText value="(520px * 150px)"/>
+                      </h:panelGrid>-->
+                         
+                    </h:panelGrid>
+                    </div>
+                    <div class="two">
+                        <p style="font-size: 14px;margin-right: 5px;margin-left: 6px;">Please Select the checkbox Beneath Ads to Know the Price Tag</p>
+                        <div class="clear"/>
+                        <h:panelGrid columns="4" style="margin-top: -9px;"> 
+                            <h:outputText value="Choose Display type:" style="font-size: 12px;
+margin-top: -6px;
+float: left;"/>
+                            
+                            <p:selectBooleanCheckbox />
+                              <h:outputText value="Permanent"/>
+                              <p:selectOneRadio id="options" >  
+            <f:selectItem itemLabel="PPC" itemValue="1" />  
+            <f:selectItem itemLabel="Impression" itemValue="2" />  
+          
+        </p:selectOneRadio> 
+                        </h:panelGrid>
+                        <p:dataTable var="ad" value="#{adsBean.as}" style="margin-top: 6px;margin-left: 6px;">  
+        <p:column headerText="Ad Size">  
+            <h:outputText value="#{ad.adsize}" />  
+        </p:column>  
+  
+        <p:column headerText="Year">  
+            <h:outputText value="#{ad.date}" />  
+        </p:column>  
+  
+        <p:column headerText="Manufacturer">  
+            <h:outputText value="#{ad.duration}" />  
+        </p:column>  
+  
+    </p:dataTable>   
+                        <p:commandButton   value="Calculate Price" style="margin-left: 104px;
+                                           margin-top: 14px;"   onclick="PF('dlg1').show();"/>
+            
+             <p:dialog id="basicDialog" header="Kindly provide basic information about yourself" widgetVar="dlg1">
+                            <h:panelGrid columns="1">
+                                <h:inputText id="name"/>
+                                <p:watermark value="Name" for="name"/>
+                                <h:inputText id="mobile"/>
+                                <p:watermark value="Mobile" for="mobile"/>
+                                             <h:inputText id="colleges" />
+                                             <p:watermark value="College Name" for="colleges"/>
+                                             <h:inputText id="email"/>
+                                             <p:watermark value="Email id" for="email"/>
+                                             <p:commandButton value="Submit"/>
+                                             </h:panelGrid>
+                                             </p:dialog>
+                        
+                    
+                        <p:progressBar value="100" labelTemplate="{value}%" displayOnly="true" style="width: 328px;
+margin-left: 5px;
+margin-top: 12px;"/>   
+                    </div>
+                </div>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</html>
+

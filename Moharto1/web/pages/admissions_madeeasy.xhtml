@@ -1,0 +1,270 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <!--<h:outputStylesheet library="css" name="testimonials.css"/>-->
+        <h:outputStylesheet library="css" name="admissions_madeeasy.css"/>
+        <style>
+
+            .ui-datatable-scrollable-body::-webkit-scrollbar {
+                -webkit-appearance: none;
+                width: 8px;
+                background-color: transparent;
+            }
+
+            .tabview ul{
+                padding: 0px!important;
+
+            }
+
+            .tabview ui-tabs ui-tabs-nav li a{
+                padding: .5em 10px!important;
+            }
+      
+
+        </style>
+
+    </h:head>
+    <ui:composition template="/template/commonTemplate.xhtml">
+
+        <ui:define name='pageContent'>
+            <h:form>
+                <div class="stage">
+                    <div class="stage">
+
+                    </div>
+                    <div class="main">
+                        <h:outputText value="Admission Made Easy" style="font-weight: 700;float: left;font-size: 16px;color: #49a4c8;margin-top: 7px;margin-left:6px;"/>
+
+                        <p style="float: left;
+                           text-align: left;
+                           font-size: 13px;
+                           margin-left: 17px;
+                           margin-top: 8px;"> Moharto intends to bring all colleges on a common platform for online admissions so that course 
+                            seekers can enroll themselves online with the college of their choice subject to selection criteria.It
+                            aims to ease the life of students who can sit anywhere before a computer and take admission online by following
+                            few easy steps and just in matter of few minutes</p >
+
+                        <!--                            <h:outputText value="For Colleges" style="font-size: 17px;
+                                                                  float: left;
+                                                                  color: chocolate;
+                                                                  margin-top: 1px;
+                                                                 
+                        
+                        
+                                                                  "/>
+                                                    <p style="font-size: 13px;float: left;text-align: justify;margin-left: 17px;margin-top: 8px;">Since mohato aims to draw huge traffic of students to its portal,colleges may look
+                                                        forward to close their admissions faster with the help of moharto.Moharto is not just a directory
+                                                        listing of all colleges and courses;it would even promote its members to online admission seekers</p>-->
+
+                        <h:outputText value="For Students" style="font-size: 15px;
+                                      color: #49a4c8;
+                                      float: left;
+                                      margin-top: -7px;
+                                      margin-left: 7px;"/>
+                        <p style="font-size: 13px;text-align: left;float: left;margin-left: 17px;margin-top: 8px;">Moharto provides the facility of selecting a course with your own preference of location
+                            and college from anywhere in india for online admission. hence students sitting in north india 
+                            can take admission into colleges of south india and students sitting in south india 
+                            can take admission into colleges of north india.</p>
+
+                        <h:outputText value="How to Proceed" style="float: left;
+                                      font-size: 15px;
+                                      margin-top: 7px;margin-left: 7px;color: #49a4c8;"/>
+                        <p style="font-size: 13px;text-align: left;float: left;margin-left: 17px;margin-top: 8px;">
+                            Moharto is giving you the easiest way to take admission online by following few simple easy steps. You may select the course, location, college, have a fee budget set and then enroll ONLINE to take your ADMISSION in your preferred college.
+                            Isn’t it fascinating that your college admission could be in a matter of being there on moharto for 15 minutes..!!!
+
+                        </p>
+                        <ol style="list-style: decimal;
+                            float: left;
+                            margin-top: 6px;
+                            margin-left: -5px;font-size: 14px;
+                            ">
+                            <li>Select course</li>
+                            <li>Select Location and College</li>
+                            <li>Fill the Application</li>
+                            <li>Make Payment</li>
+                            <li>Receive Admission Letter</li>
+                        </ol>
+                        <h:graphicImage value="../resources/images/partner/1.png" style="width: 230;
+                                        height: 418px;
+                                        float: left;
+                                        margin-left: 154px;
+                                        margin-top: -20px;"/>
+                        <h:outputText value="Process of 15 minutes,your admission is done" style="float: left;font-size: 13px;
+                                      margin-left: 17px;"/><br/>
+                        <h:outputText value="Now try the new way of getting admissions online" style="float: left;
+                                      font-size: 13px;
+                                      margin-left: -262px;
+                                      margin-top: 26px;
+                                      "/>
+                    </div>
+                    <div class="rightcolumn">
+                        <div style="border: 1px solid #ddd;border-radius: 4px;width: 230px;">
+                            <br/>
+                            <center><h:outputLabel value="I Want To Do" style="font-size: 12px;font-weight: bold;"/></center>
+                            <br/>
+                            <h:panelGrid columns="2" >
+                                <p:tabView id="tv" style="padding-left: 0px;padding-right: 0px;border: 0px;"  effect="slide" styleClass="tabview">
+                                    <p:tab id="pgtab" title="After 10th" titleStyleClass="tab1" >
+                                        <h:form>
+                                            <h:panelGrid columns="1" style="text-align: left;">
+                                                <p:selectOneMenu id="selcourse" value="#{myBean.username}" style="width:150px;" effect="fold" filter="true" filterMatchMode="startsWith" >
+                                                    <f:selectItem itemLabel="Select Course" itemValue=""/>
+                                                    <f:selectItem itemLabel="PUC" itemValue="22"/>
+                                                    <f:selectItem itemLabel="Diploma" itemValue="23"/>
+                                                    <f:selectItem itemLabel="ITI" itemValue="24"/>
+                                                    <f:selectItem itemLabel="Nursing" itemValue="24"/>
+                                                </p:selectOneMenu>
+                                                <p:selectOneMenu id="selcity" value="#{myBean.username}" style="width:150px;" effect="fold" filter="true" filterMatchMode="startsWith" >
+                                                    <f:selectItem itemLabel="Select City" itemValue=""/>
+                                                    <f:selectItem itemLabel="Bangalore" itemValue="Bangalore"/>
+                                                    <f:selectItem itemLabel="chennai" itemValue="chennai"/>
+                                                    <f:selectItem itemLabel="Kochi" itemValue="Kochi"/>
+                                                    <f:selectItem itemLabel="Hubli-Dharwad" itemValue="hubli-dwd"/>
+                                                    <f:selectItem itemLabel="Mysore" itemValue="mysore"/>
+                                                    <f:selectItem itemLabel="Mangalore" itemValue="mangalore"/>
+                                                    <f:selectItem itemLabel="Hyderabad" itemValue="hyderabad"/>
+                                                    <f:selectItem itemLabel="Mumbai" itemValue="mumbai"/>
+                                                    <f:selectItem itemLabel="Ahmedabad" itemValue="ahmedabad"/>
+                                                    <f:selectItem itemLabel="Pune" itemValue="pune"/>
+                                                    <f:selectItem itemLabel="Davangere" itemValue="davangere"/>
+                                                    <f:selectItem itemLabel="Belgaum" itemValue="belgaum"/>
+                                                    <f:selectItem itemLabel="Bijapur" itemValue="bijapur"/>
+                                                    <f:selectItem itemLabel="Gulbarga" itemValue="gulbarga"/>
+                                                </p:selectOneMenu>
+                                            </h:panelGrid>
+                                            <a href="moharto_available_seats_new.xhtml"><button type="button" class="btn" style="width: 50px;
+                                                                                                height: 29px;margin-left: 50px;
+                                                                                                margin-top: 10px;">GO</button></a>
+                                            <h:outputText id="sa" value="#{myBean.password}"/>
+                                        </h:form>
+                                    </p:tab>
+                                    <p:tab id="ugtab" title="After 12th" titleStyleClass="tab2">
+                                        <h:form>
+                                            <h:panelGrid columns="1" style="text-align: left;" >
+                                                <p:selectOneMenu id="selcourse" value="#{myBean.username}" style="width:150px;" effect="fold" filter="true" filterMatchMode="startsWith">
+                                                    <f:selectItem itemLabel="Select Course" itemValue=""/>
+                                                    <f:selectItem itemLabel="B.E" itemValue="M.COM"/>
+                                                    <f:selectItem itemLabel="B.Tech" itemValue="M.TECH"/>
+                                                    <f:selectItem itemLabel="B.B.M" itemValue="M.COM"/>
+                                                    <f:selectItem itemLabel="B.B.A" itemValue="M.TECH"/>
+                                                    <f:selectItem itemLabel="B.Com" itemValue="MBA"/>
+                                                    <f:selectItem itemLabel="B.C.A" itemValue="M.COM"/>
+                                                    <f:selectItem itemLabel="B.C.S" itemValue="M.TECH"/>
+                                                    <f:selectItem itemLabel="B.D.S" itemValue="MBA"/>
+                                                    <f:selectItem itemLabel="B.Ed" itemValue="M.COM"/>
+                                                    <f:selectItem itemLabel="B.F.Tech" itemValue="M.TECH"/>
+                                                    <f:selectItem itemLabel="B.H.M" itemValue="MBA"/>
+                                                    <f:selectItem itemLabel="B.L" itemValue="M.COM"/>
+                                                    <f:selectItem itemLabel="B.Pharma" itemValue="M.TECH"/>
+                                                    <f:selectItem itemLabel="B.Sc.Ed" itemValue="M.COM"/>
+                                                    <f:selectItem itemLabel="B.Sc" itemValue="M.TECH"/>
+                                                    <f:selectItem itemLabel="B.V.Sc" itemValue="MBA"/>
+                                                    <f:selectItem itemLabel="B.A. B.Ed" itemValue="M.COM"/>
+                                                    <f:selectItem itemLabel="B.A.LLB" itemValue="M.TECH"/>
+                                                    <f:selectItem itemLabel="B.C.J" itemValue="MBA"/>
+                                                    <f:selectItem itemLabel="B.F.I.A" itemValue="M.COM"/>
+                                                    <f:selectItem itemLabel="B.H.M.S" itemValue="M.TECH"/>
+                                                    <f:selectItem itemLabel="B.V.Sc" itemValue="MBA"/>
+                                                    <f:selectItem itemLabel="B.D.S" itemValue="MBA"/>
+                                                    <f:selectItem itemLabel="B.P.ED" itemValue="M.COM"/>
+                                                    <f:selectItem itemLabel="B.Lit" itemValue="M.TECH"/>
+                                                    <f:selectItem itemLabel="B.Des" itemValue="MBA"/>
+                                                </p:selectOneMenu>
+                                                <p:selectOneMenu id="selcity" value="#{myBean.username}" style="width:150px;" effect="fold" filter="true" filterMatchMode="startsWith" >
+                                                    <f:selectItem itemLabel="Select City" itemValue=""/>
+                                                    <f:selectItem itemLabel="Bangalore" itemValue="Bangalore"/>
+                                                    <f:selectItem itemLabel="chennai" itemValue="chennai"/>
+                                                    <f:selectItem itemLabel="Kochi" itemValue="Kochi"/>
+                                                    <f:selectItem itemLabel="Hubli-Dharwad" itemValue="hubli-dwd"/>
+                                                    <f:selectItem itemLabel="Mysore" itemValue="mysore"/>
+                                                    <f:selectItem itemLabel="Mangalore" itemValue="mangalore"/>
+                                                    <f:selectItem itemLabel="Hyderabad" itemValue="hyderabad"/>
+                                                    <f:selectItem itemLabel="Mumbai" itemValue="mumbai"/>
+                                                    <f:selectItem itemLabel="Ahmedabad" itemValue="ahmedabad"/>
+                                                    <f:selectItem itemLabel="Pune" itemValue="pune"/>
+                                                    <f:selectItem itemLabel="Davangere" itemValue="davangere"/>
+                                                    <f:selectItem itemLabel="Belgaum" itemValue="belgaum"/>
+                                                    <f:selectItem itemLabel="Bijapur" itemValue="bijapur"/>
+                                                    <f:selectItem itemLabel="Gulbarga" itemValue="gulbarga"/>
+                                                </p:selectOneMenu>
+                                            </h:panelGrid>
+                                            <a href="moharto_available_seats_new.xhtml"><button type="button" class="btn" style="width: 50px;
+                                                                                                height: 29px;margin-left: 50px;
+                                                                                                margin-top: 10px;">GO</button></a>
+                                            <h:outputText id="sa" value=" #{myBean.password}"/>
+                                        </h:form>
+                                    </p:tab>
+                                    <p:tab id="aftr10tab" title="PG" titleStyle="tab3">
+                                        <h:form>
+                                            <h:panelGrid columns="1" style="text-align: left;">
+
+                                                <p:selectOneMenu id="selcourse" value="#{myBean.username}" style="width:150px;" effect="fold" filter="true" filterMatchMode="startsWith" >
+                                                    <f:selectItem itemLabel="Select Course" itemValue=""/>
+                                                    <f:selectItem itemLabel="M.B.A" itemValue="M.COM"/>
+                                                    <f:selectItem itemLabel="M.A" itemValue="M.TECH"/>
+                                                    <f:selectItem itemLabel="M.Com" itemValue="MBA"/>
+                                                    <f:selectItem itemLabel="M.C.A" itemValue="M.COM"/>
+                                                    <f:selectItem itemLabel="M.Ed" itemValue="M.TECH"/>
+                                                    <f:selectItem itemLabel="M.E" itemValue="MBA"/>
+                                                    <f:selectItem itemLabel="M.Sc" itemValue="M.COM"/>
+                                                    <f:selectItem itemLabel="M.Tech" itemValue="M.TECH"/>
+                                                    <f:selectItem itemLabel="LL.M" itemValue="MBA"/>
+                                                    <f:selectItem itemLabel="M.L" itemValue="M.COM"/>
+                                                    <f:selectItem itemLabel="M.Pharma" itemValue="M.TECH"/>
+                                                    <f:selectItem itemLabel="M.Phil" itemValue="MBA"/>
+                                                    <f:selectItem itemLabel="M.D.S" itemValue="MBA"/>
+                                                    <f:selectItem itemLabel="M.A.M" itemValue="M.COM"/>
+                                                    <f:selectItem itemLabel="M.H.M" itemValue="M.TECH"/>
+                                                    <f:selectItem itemLabel="M.H.H.M" itemValue="MBA"/>
+
+                                                </p:selectOneMenu>
+                                                <p:selectOneMenu id="selcity" value="#{myBean.username}" style="width:150px;" effect="fold" filter="true" filterMatchMode="startsWith" >
+                                                    <f:selectItem itemLabel="Select City" itemValue=""/>
+                                                    <f:selectItem itemLabel="Bangalore" itemValue="Bangalore"/>
+                                                    <f:selectItem itemLabel="chennai" itemValue="chennai"/>
+                                                    <f:selectItem itemLabel="Kochi" itemValue="Kochi"/>
+                                                    <f:selectItem itemLabel="Hubli-Dharwad" itemValue="hubli-dwd"/>
+                                                    <f:selectItem itemLabel="Mysore" itemValue="mysore"/>
+                                                    <f:selectItem itemLabel="Mangalore" itemValue="mangalore"/>
+                                                    <f:selectItem itemLabel="Hyderabad" itemValue="hyderabad"/>
+                                                    <f:selectItem itemLabel="Mumbai" itemValue="mumbai"/>
+                                                    <f:selectItem itemLabel="Ahmedabad" itemValue="ahmedabad"/>
+                                                    <f:selectItem itemLabel="Pune" itemValue="pune"/>
+                                                    <f:selectItem itemLabel="Davangere" itemValue="davangere"/>
+                                                    <f:selectItem itemLabel="Belgaum" itemValue="belgaum"/>
+                                                    <f:selectItem itemLabel="Bijapur" itemValue="bijapur"/>
+                                                    <f:selectItem itemLabel="Gulbarga" itemValue="gulbarga"/>
+                                                </p:selectOneMenu>
+                                            </h:panelGrid>
+                                            <a href="moharto_available_seats_new.xhtml"><button type="button" class="btn" style="width: 50px;
+                                                                                                height: 29px;margin-left: 50px;
+                                                                                                margin-top: 10px;">GO</button></a>
+                                            <h:outputText id="sa" value=" #{myBean.password}"/>
+                                        </h:form>
+                                    </p:tab>
+                                </p:tabView>
+                            </h:panelGrid>
+                        </div>
+
+
+                        <h:graphicImage value="../resources/images/pages/Untitled.png" style="float: left;
+                                        width: 230px;
+                                        height: 418px;
+                                        margin-top: 2px;
+                                        margin-left: 5px;
+
+                                        "/>
+
+
+                    </div>
+                </div>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</html>

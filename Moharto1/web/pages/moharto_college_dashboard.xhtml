@@ -1,0 +1,236 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <h:outputStylesheet library="css" name="college_dashboard.css"/>
+        <style>
+            .r1{height: 144px; width: 166px; float:left; margin-left: 10px;margin-top: 10px; border-radius: 5px; background-image: url("../resources/images/home/box_5_1.png"); }
+            .r2{height: 144px; width: 166px; float:left; margin-left: 10px;margin-top: 10px; border-radius: 5px; background-image: url("../resources/images/home/box_2_2.png"); }
+            .r3{height: 144px; width: 166px; float: left; margin-left: 10px; margin-top: 10px; border-radius: 5px; background-image: url("../resources/images/home/box_3_3.png");}
+            .r4{height: 144px; width: 166px; float:left; margin-left: 10px; margin-top: 10px; border-radius: 5px;background-image: url("../resources/images/home/box_4_2.png");}
+
+            .c1{height: 144px; width: 166px;  float:left; margin-top: 10px; border-radius: 5px;background-image: url("../resources/images/home/Box_1_1.png");}
+            .c2{height: 144px; width: 166px;  float:left; margin-top: 10px; border-radius: 5px;background-image: url("../resources/images/home/Box_2_1.png");}
+            .c3{height: 144px; width: 166px;  float:left;  margin-top: 10px; border-radius: 5px;background-image: url("../resources/images/home/Box_3_1.png");}
+            .c4{height: 144px; width: 166px; float:left;  margin-top: 10px; border-radius: 5px;background-image: url("../resources/images/home/Box_4_1.png");}
+
+            .t1{height: 144px; width: 144px;  float:left; margin-left: 40px; margin-top: 10px; border-radius: 5px;background-image: url("../resources/images/home/box_1.png");}
+            .t2{height: 144px; width: 144px;  float:left; margin-left: 10px; margin-top: 10px; border-radius: 5px;background-image: url("../resources/images/home/box_2.png");}
+            .t3{height: 144px; width: 144px;  float:left; margin-left: 10px; margin-top: 10px; border-radius: 5px;background-image: url("../resources/images/home/box_3.png");}
+            .t4{height: 144px; width: 144px; float:left; margin-left: 10px; margin-top: 10px; border-radius: 5px;background-image: url("../resources/images/home/box_4.png");}
+
+            .fs1 legend{
+                background: none!important;
+                border: none!important;
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <ui:composition template="/template/commonTemplate.xhtml">
+
+            <ui:define name='pageContent'>
+                <f:view>
+                    <div class="college_dashboard_maincontainer">
+                        <div class="college_dashboard_menu">
+                            <h:form>
+                                <p:menubar autoDisplay="false">
+
+                                    <p:menuitem value="Dashboard" url="moharto_college_dashboard.xhtml" style="padding-left: 10px;padding-right:10px;"/>
+                                    <p:submenu label="My College"  style="padding-left: 10px;padding-right:10px;" >
+                                        <p:menuitem icon="ui-icon-docunent" value="Microsite" url="microsite_home.xhtml"/>
+                                        <p:menuitem icon="ui-icon-docunent" value="Profile" url="moharto_dashboard_profile.xhtml"/>
+                                        <p:menuitem icon="ui-icon-docunent" value="Subscriptions" url="moharto_subscription.xhtml"/>
+                                        <p:menuitem icon="ui-icon-docunent" value="Add Course" url="moharto_college_dashboard_add_course.xhtml"/>
+                                    </p:submenu>
+                                    <p:submenu label="Admissions"  style="padding-left: 10px;padding-right:10px;">
+                                        <p:menuitem value="Update Seats" icon="ui-icon-docunent" url="moharto_dashboard_availableseats.xhtml"/>
+                                        <p:menuitem value="Enrollments" icon="ui-icon-docunent" url="EnrollmentHistory.xhtml"/>
+                                        <p:menuitem value="Verifications" icon="ui-icon-docunent" url="VerificationHistory.xhtml"/>
+                                    </p:submenu>
+                                    <p:submenu label="Ads"  style="padding-left: 10px;padding-right:10px;">
+                                        <p:menuitem icon="ui-icon-docunent" value="Post Ad" url="moharto_college_dashboard_ad.xhtml"/>
+                                        <p:menuitem icon="ui-icon-docunent" value="Ad Transactions"/>
+                                    </p:submenu>
+
+                                    <p:submenu label="Messages"  style="padding-left: 10px;padding-right:10px;">
+                                        <p:menuitem value="Forum" icon="ui-icon-docunent" url="college_dashboard_messages.xhtml"/>
+                                        <p:menuitem value="Reviews" icon="ui-icon-docunent" url="moharto_review_datatable.xhtml"/>
+
+                                    </p:submenu>
+
+                                </p:menubar>  
+
+                                <p:fieldset  legend="Ad Analytics" style="margin-top: 15px;" styleClass="fs1">
+                                    <!--                                    RECTANGLE B0X STARTS -->
+                                    <div class="r1" style="">
+                                        <div id="lb1" style="padding-top: 45px; padding-left: 15px; color: rgb(255, 255, 255);">
+
+                                            <div class="rectangle_lab_1"> <center><p:outputLabel value="10" style="font-size: 38pt; font-weight: bold;color: white;"/> </center></div>
+                                            <div class="rectnagle_lab_2"> <center>  <a href ="#" style="color: white;font-size: 15pt;"> Site Visitors</a></center></div>
+                                        </div>
+                                    </div>
+                                    <!--RECTANGLE BOX ENDS--> 
+                                    <div class="r2" style="">
+                                        <div id="lb1" style="padding-top: 45px; padding-left: 15px; color: rgb(255, 255, 255);">
+
+                                            <div class="rectangle_lab_1"> <center><p:outputLabel value="10" style="font-size: 38pt; font-weight: bold;color: white;"/> </center></div>
+                                            <div class="rectnagle_lab_2"> <center><a href ="#" style="color: white;"> Ad impression</a>  </center></div>
+
+                                        </div>
+                                    </div>
+                                    <div class="r3" style="">
+                                        <div id="lb1" style="padding-top: 45px; padding-left: 15px; color: rgb(255, 255, 255);">
+
+                                            <div class="rectangle_lab_1"> <center><p:outputLabel value="10" style="font-size: 38pt; font-weight: bold;color: white;"/> </center></div>
+                                            <div class="rectnagle_lab_2"> <center>  <a href="#" style="color: white;">Site Visitors</a></center></div>
+                                        </div>
+                                    </div>   
+
+
+                                    <div class="r4" >
+
+                                        <div id="lb1" style="padding-top: 45px; padding-left: 15px; color: rgb(255, 255, 255);">
+
+                                            <div class="rectangle_lab_1"> <center><p:outputLabel value="10" style="font-size: 38pt; font-weight: bold;color: white;"/> </center></div>
+                                            <div class="rectnagle_lab_2"> <center>   <a href="#" style="color: white;">Listing Impressions</a> </center></div>
+
+                                        </div>
+                                    </div>
+                                    <!--RECTANGLE B0X STARTS--> 
+                                    <!--                                    <div class="r1" style="">
+                                                                            <div id="lb1" style="padding-top: 45px; padding-left: 15px; color: rgb(255, 255, 255);">
+                                    
+                                                                                <div class="rectangle_lab_1"> <center><p:outputLabel value="10" style="font-size: 38pt; font-weight: bold;color: white;"/> </center></div>
+                                                                                <div class="rectnagle_lab_2"> <center>  <p:outputLabel value="Site Visitors" style="color: white;font-size: 15pt;"/> </center></div>
+                                                                            </div>
+                                                                        </div>-->
+                                    <!--RECTANGLE BOX ENDS--> 
+
+                                    <!--<p:commandButton value="PostAd"  style="float: right;margin-top: 5px;"/>-->
+                                    <!--                                    <p:commandButton value="PostAd"  style="float: right;margin-top: 125px;"/>-->
+                                </p:fieldset>
+
+
+
+
+                                <p:fieldset legend="Admissions" style="margin-top: 15px;" styleClass="fs1">
+                                    <div class="c1"><div class="rectangle_lab_13" style="padding-top: 50px;"> <center><p:outputLabel value="10" style="font-size: 38pt; font-weight: bold;padding-top: 20px;color: white;"/> </center></div>
+                                        <div class="rectnagle_lab_14"  style=""> <center> 
+                                                <!--<p:outputLabel value="New Applications" style="color: white;"/>-->
+                                                <a href="VerificationHistory.xhtml" style="color: white;">New Applications</a>
+                                            </center></div></div>
+                                    <div class="c2">
+                                        <div class="rectangle_lab_13" style="padding-top: 50px;"> <center><p:outputLabel value="10" style="font-size: 38pt; font-weight: bold;padding-top: 20px;color: white;"/> </center></div>
+                                        <div class="rectnagle_lab_14"  style="">
+                                            <center>  
+                                                <!--<p:outputLabel value="Pending Applications " style="color: white;"/>-->
+                                                <a href="VerificationHistory.xhtml" style="color: white;">Pending Applications</a>
+                                            </center></div>
+                                    </div>
+                                    <div class="c3">
+                                        <div class="rectangle_lab_13" style="padding-top: 50px;"> <center><p:outputLabel value="10" style="font-size: 38pt; font-weight: bold;padding-top: 20px;color: white;"/> </center></div>
+                                        <div class="rectnagle_lab_14"  style=""> 
+                                            <center>  
+                                                <!--<p:outputLabel value="Seats Filled" style="color: white;"/>--> 
+                                                <a href="EnrollmentHistory.xhtml" style="color: white;">Seats Filled</a>
+                                            </center></div>
+                                    </div>
+                                    <div class="c4">
+                                        <div class="rectangle_lab_13" style="padding-top: 50px;"> <center><p:outputLabel value="10" style="font-size: 38pt; font-weight: bold;padding-top: 20px; color: white;"/> </center></div>
+                                        <div class="rectnagle_lab_14"  style=""> <center> 
+                                                <!--<p:outputLabel value="Seats Available" style="color: white;"/>--> 
+                                                <a href="EnrollmentHistory.xhtml" style="color: white;">Seats Available</a>
+                                            </center></div>
+                                    </div>
+                                    <p:commandButton value="Update Seats"  style="float: right;margin-top: 125px;"/>
+                                </p:fieldset>
+
+                                <!--                                <p:fieldset legend="Transaction" style="margin-top: 15px;" styleClass="fs1">
+                                                                    <div class="t1"><div class="rectangle_lab_13" style="padding-top: 20px;"> <center><p:outputLabel value="10" style="font-size: 38pt; font-weight: bold;padding-top: 20px;color: white;"/> </center></div>
+                                                                        <div class="rectnagle_lab_14"  style=""> <center>  <p:outputLabel value="Amount Recieved" style="color: white;"/> </center></div></div>
+                                                                    <div class="t2">
+                                                                        <div class="rectangle_lab_13" style="padding-top: 20px;"> <center><p:outputLabel value="10" style="font-size: 38pt; font-weight: bold;padding-top: 20px;color: white;"/> </center></div>
+                                                                        <div class="rectnagle_lab_14"  style=""> <center>  <p:outputLabel value="Amount Paid" style="color: white;"/> </center></div>
+                                                                    </div>
+                                                                    <div class="t3">
+                                                                        <div class="rectangle_lab_13" style="padding-top: 20px;"> <center><p:outputLabel value="10" style="font-size: 38pt; font-weight: bold;padding-top: 20px;color: white;"/> </center></div>
+                                                                        <div class="rectnagle_lab_14"  style=""> <center>  <p:outputLabel value="Balance Anount" style="color: white;"/> </center></div>
+                                                                    </div>
+                                                                    <div class="t4">
+                                                                        <div class="rectangle_lab_13" style="padding-top: 20px;"> <center><p:outputLabel value="10" style="font-size: 38pt; font-weight: bold;padding-top: 20px;color: white;"/> </center></div>
+                                                                        <div class="rectnagle_lab_14"  style=""> <center>  <p:outputLabel value="Total Amount" style="color: white;"/> </center></div>
+                                                                    </div>
+                                                                    <p:commandButton value="View Transaction"  style="float: right;margin-top: 5px;"/>
+                                                                </p:fieldset>-->
+
+
+                                <p:fieldset legend="Forum" style="margin-top: 15px;" styleClass="fs1">
+                                    <p:dataTable id="dtle" var="tt" value="#{dashboard.lst}">
+                                        <p:column headerText="From" >
+                                            <h:outputText value="#{tt.name}"/>
+                                        </p:column>
+                                        <!--                                        <p:column headerText="Type" >
+                                                                                    <h:outputText value="#{tt.type}"/>
+                                                                                </p:column>-->
+                                        <p:column headerText="Date" >
+                                            <h:outputText value="#{tt.time}"/>
+                                        </p:column>
+                                        <p:column headerText="Description" >
+                                            <h:outputText value="#{tt.description}"/>
+                                        </p:column>
+                                        <p:column headerText="Actions"  colspan="5" width="20" >
+                                            <center> <a href="moharto_available_seats_new.xhtml"><button type="button" class="btn" style="width: 50px;
+                                                                                                         height: 29px;
+                                                                                                         ">View</button></a>
+                                                <a href="moharto_available_seats_new.xhtml"><button type="button" class="btn" style="width: 50px;
+                                                                                                    height: 29px;
+                                                                                                    ">Delete</button></a>
+                                            </center>
+                                        </p:column>
+                                    </p:dataTable> 
+
+                                    <a href="college_dashboard_messages" style="float: right;padding: 9px;font-weight: 700;">View More</a>
+                                </p:fieldset>
+
+<!--                                <p:fieldset legend="Forum" style="margin-top: 15px;" styleClass="fs1">
+                                    <p:dataTable id="dtle" var="tt" value="#{dashboard.lst}">
+                                        <p:column headerText="From" >
+                                            <h:outputText value="#{tt.name}"/>
+                                        </p:column>
+                                                                                <p:column headerText="Type" >
+                                                                                    <h:outputText value="#{tt.type}"/>
+                                                                                </p:column>
+                                        <p:column headerText="Date" >
+                                            <h:outputText value="#{tt.time}"/>
+                                        </p:column>
+                                        <p:column headerText="Description" >
+                                            <h:outputText value="#{tt.description}"/>
+                                        </p:column>
+                                        <p:column headerText="Actions"  colspan="5" width="20" >
+                                            <center> <a href="moharto_available_seats_new.xhtml"><button type="button" class="btn" style="width: 50px;
+                                                                                                         height: 29px;
+                                                                                                         ">View</button></a>
+                                                <a href="moharto_available_seats_new.xhtml"><button type="button" class="btn" style="width: 50px;
+                                                                                                    height: 29px;
+                                                                                                    ">Delete</button></a>
+                                            </center>
+                                        </p:column>
+                                    </p:dataTable> 
+
+                                    <a href="#" style="float: right;
+                                       padding: 9px;
+                                       font-weight: 700;">View More</a>
+                                </p:fieldset>-->
+
+                            </h:form>
+                        </div>
+                    </div>
+                </f:view>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>

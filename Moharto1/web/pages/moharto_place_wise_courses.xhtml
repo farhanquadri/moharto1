@@ -1,0 +1,395 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+        <h:outputStylesheet library="css" name="placewise_courses.css"/>
+        <style>
+            .tabview ul{
+                padding: 0px!important;
+       
+            }
+            
+            .tabview ui-tabs ui-tabs-nav li a{
+                padding: .5em 10px!important;
+            }
+        </style>
+    </h:head>
+    <ui:composition template="/template/commonTemplate.xhtml">
+
+        <ui:define name='pageContent'>
+            <div class="main">
+                <h:form>
+                    <div class="pc1">
+
+                        <h:outputText value="PlaceWise Courses" style="margin-left: 10px;margin-top: 10px;font-size: 15px;font-weight: bold;float: left;color: #49a4c8;"/><br/>
+                        <h:outputText value="Cities in India" style="float: left;margin-left: -115px;margin-top: 26px;font-size: 13px;font-weight: bold;"/>
+                        <div class="maincont">
+                            <div class="city1"  style="margin-left: -91px;">
+                                <ul style="
+                                    list-style-type: none;margin-left: -34px;margin-top: 3px;">
+                                    <li ><p:commandLink value="Bangalore" action="moharto_place_courses" ajax="false"/></li><br/>
+                                    <li style="margin-top: -6px;">    <p:commandLink value="Hyderabad"/></li>
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Chandigarh"/></li>
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Bhopal"/></li>
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Dharwad"/></li>
+
+                                </ul>
+                            </div>
+                            <div class="city1" style="margin-left: 20px;">
+                                <ul style="
+                                    list-style-type: none;margin-left: -34px;margin-top: 3px;">
+
+                                    <li >    <p:commandLink value="Chennai"/></li>
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Kolkatta"/></li>
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Jharkhand"/></li>
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Jaipur"/></li>
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Pune"/></li>
+
+                                </ul>
+                            </div>
+                            <div class="city1" style="margin-left: 23px;">
+                                <ul style="
+                                    list-style-type: none;margin-left: -34px;margin-top: 3px;">
+
+                                    <li>    <p:commandLink value="Delhi"/></li>
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Mumbai"/></li>
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Mangalore"/></li>
+                                    <li style="margin-top: 9px;">    <p:commandLink value="New Delhi"/></li>
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Navi Mumbai"/></li>
+
+                                </ul>
+                            </div>
+                            <div class="city1" style="margin-left: 29px;">
+                                <ul style="
+                                    list-style-type: none;margin-left: -34px;margin-top: 3px;">
+
+                                    <li >    <p:commandLink value="Srinagar"/></li>
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Aurangabad"/></li>
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Guwahati"/></li>
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Patna"/></li>
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Jamshedpur"/></li>
+
+
+                                </ul>
+                            </div>
+                            <div class="city1" style="margin-left: 30px;">
+                                <ul style="
+                                    list-style-type: none;margin-left: -34px;margin-top: 3px;">
+
+                                    <li >    <p:commandLink value="Cochin"/></li>
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Noida"/></li>
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Agartala"/></li>
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Visakhapatnam"/></li>
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Kanpur"/></li>
+
+
+                                </ul>
+                            </div>
+                            <div class="clear"/>
+                            <p:separator id="separator" style="width: 570px;float: left;margin-left: 12px;"/> 
+                            <div class="clear"/>
+                            <div class="city2" style="margin-left: 29px;">
+                                <ul style="
+                                    list-style-type: none;margin-left: -33px;margin-top: -7px;">
+
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Ahmedabad"/></li> 
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Agra"/></li>
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Aizawl"/></li>
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Allahabad"/></li>
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Ajmer"/></li>
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Ambala"/></li>
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Amravathi"/></li>
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Belgaum"/></li>
+
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Bhubaneswar"/></li>
+
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Bijapur"/></li>
+                                    <!--                            <li style="margin-top: 9px;">    <p:commandLink value="Bareilly"/></li>-->
+
+
+
+                                </ul>
+                            </div>
+                            <div class="city2" style="margin-left: 21px;">
+                                <ul style="
+                                    list-style-type: none;margin-left: -33px;margin-top: -7px;">
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Bhiwandi"/></li>
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Bikaner"/></li>
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Bharatpur"/></li>
+
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Calicut"/></li>
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Chittoor"/></li>
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Cuttack"/></li>
+
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Dehradun"/></li>
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Darjeeling"/></li>
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Dhanbad"/></li>
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Daman Diu"/></li>
+                                    <!--                            <li style="margin-top: 9px;">    <p:commandLink value="Davangere"/></li>-->
+
+
+                                </ul>
+                            </div>
+                            <div class="city2" style="margin-left: 21px;">
+
+
+
+
+
+                                <ul style="
+                                    list-style-type: none;margin-left: -33px;margin-top: -7px;">
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Erode"/></li>
+
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Ferozpur"/></li>
+
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Faridkot"/></li>
+
+
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Gangtok"/></li>
+
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Gaya"/></li>
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Gulbarga"/></li>
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Haryana"/></li>
+
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Haridwar"/></li>
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Hubli"/></li>
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Imphal"/></li>
+                                    <!--                            <li style="margin-top: 9px;">    <p:commandLink value="Jabalpur"/></li>-->
+
+
+
+
+                                </ul>
+                            </div>
+                            <div class="city2" style="margin-left:26px;">
+                                <ul style="
+                                    list-style-type: none;margin-left: -33px;margin-top: -7px;">
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Junagad"/></li>
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Jalgaon"/></li>
+
+
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Kanchipuram"/></li>
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Kota"/></li>
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Lucknow"/></li>
+
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Ludhiana"/></li>
+
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Meerut"/></li>
+
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Madurai"/></li>
+
+
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Mysore"/></li>
+
+
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Malegaon"/></li>
+
+                                    <!--                            <li style="margin-top: 9px;">    <p:commandLink value="nagpur"/></li>-->
+
+
+
+
+
+
+                                </ul>
+                            </div>
+
+                            <div class="city2" style="margin-left:27px;">
+                                <ul style="
+                                    list-style-type: none;margin-left: -33px;margin-top: -7px;">
+
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Patiala"/></li>
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Ranchi"/></li>
+
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Raipur"/></li>
+
+
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Rajkot"/></li>
+
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Roorkela"/></li>
+
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Surat"/></li>
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Solapur"/></li>
+
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Salem"/></li>
+
+
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Thane"/></li>
+
+
+                                    <li style="margin-top: 9px;">    <p:commandLink value="Tivandrum"/></li>
+
+
+                                    <!--                            <li style="margin-top: 9px;">    <p:commandLink value="Varanasi"/></li>-->
+
+
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--                <div class="clear"/>-->
+                    <div class="pc2" >
+
+                        <div style="border: 1px solid #ddd;border-radius: 4px;width: 230px;">
+                            <br/>
+                            <center><h:outputLabel value="I Want To Do" style="font-size: 12px;font-weight: bold;"/></center>
+                            <br/>
+                            <h:panelGrid columns="2" >
+                                <p:tabView id="tv" style="padding-left: 0px;padding-right: 0px;border: 0px;"  effect="slide" styleClass="tabview">
+                                    <p:tab id="pgtab" title="After 10th" titleStyleClass="tab1" >
+                                        <h:form>
+                                            <h:panelGrid columns="1" style="text-align: left;">
+                                                <p:selectOneMenu id="selcourse"  style="width:150px;" effect="fold" filter="true" filterMatchMode="startsWith" >
+                                                    <f:selectItem itemLabel="Select Course" itemValue=""/>
+                                                    <f:selectItem itemLabel="PUC" itemValue="22"/>
+                                                    <f:selectItem itemLabel="Diploma" itemValue="23"/>
+                                                    <f:selectItem itemLabel="ITI" itemValue="24"/>
+                                                    <f:selectItem itemLabel="Nursing" itemValue="24"/>
+                                                </p:selectOneMenu>
+                                                <p:selectOneMenu id="selcity" style="width:150px;" effect="fold" filter="true" filterMatchMode="startsWith" >
+                                                     <f:selectItem itemLabel="Select City" itemValue=""/>
+                                                    <f:selectItem itemLabel="Bangalore" itemValue="Bangalore"/>
+                                                    <f:selectItem itemLabel="chennai" itemValue="chennai"/>
+                                                    <f:selectItem itemLabel="Kochi" itemValue="Kochi"/>
+                                                    <f:selectItem itemLabel="Hubli-Dharwad" itemValue="hubli-dwd"/>
+                                                    <f:selectItem itemLabel="Mysore" itemValue="mysore"/>
+                                                    <f:selectItem itemLabel="Mangalore" itemValue="mangalore"/>
+                                                    <f:selectItem itemLabel="Hyderabad" itemValue="hyderabad"/>
+                                                    <f:selectItem itemLabel="Mumbai" itemValue="mumbai"/>
+                                                    <f:selectItem itemLabel="Ahmedabad" itemValue="ahmedabad"/>
+                                                    <f:selectItem itemLabel="Pune" itemValue="pune"/>
+                                                    <f:selectItem itemLabel="Davangere" itemValue="davangere"/>
+                                                    <f:selectItem itemLabel="Belgaum" itemValue="belgaum"/>
+                                                    <f:selectItem itemLabel="Bijapur" itemValue="bijapur"/>
+                                                    <f:selectItem itemLabel="Gulbarga" itemValue="gulbarga"/>
+                                                </p:selectOneMenu>
+                                            </h:panelGrid>
+                                            <a href="moharto_available_seats_new.xhtml"><button type="button" class="btn" style="width: 50px;
+                                                                                            height: 29px;margin-left: 50px;
+                                                                                            margin-top: 10px;">GO</button></a>
+                                            <h:outputText id="sa" />
+                                        </h:form>
+                                    </p:tab>
+                                    <p:tab id="ugtab" title="After 12th" titleStyleClass="tab2">
+                                        <h:form>
+                                            <h:panelGrid columns="1" style="text-align: left;" >
+                                                <p:selectOneMenu id="selcourse"  style="width:150px;" effect="fold" filter="true" filterMatchMode="startsWith">
+                                                    <f:selectItem itemLabel="Select Course" itemValue=""/>
+                                                    <f:selectItem itemLabel="B.E" itemValue="M.COM"/>
+                                                    <f:selectItem itemLabel="B.Tech" itemValue="M.TECH"/>
+                                                    <f:selectItem itemLabel="B.B.M" itemValue="M.COM"/>
+                                                    <f:selectItem itemLabel="B.B.A" itemValue="M.TECH"/>
+                                                    <f:selectItem itemLabel="B.Com" itemValue="MBA"/>
+                                                    <f:selectItem itemLabel="B.C.A" itemValue="M.COM"/>
+                                                    <f:selectItem itemLabel="B.C.S" itemValue="M.TECH"/>
+                                                    <f:selectItem itemLabel="B.D.S" itemValue="MBA"/>
+                                                    <f:selectItem itemLabel="B.Ed" itemValue="M.COM"/>
+                                                    <f:selectItem itemLabel="B.F.Tech" itemValue="M.TECH"/>
+                                                    <f:selectItem itemLabel="B.H.M" itemValue="MBA"/>
+                                                    <f:selectItem itemLabel="B.L" itemValue="M.COM"/>
+                                                    <f:selectItem itemLabel="B.Pharma" itemValue="M.TECH"/>
+                                                    <f:selectItem itemLabel="B.Sc.Ed" itemValue="M.COM"/>
+                                                    <f:selectItem itemLabel="B.Sc" itemValue="M.TECH"/>
+                                                    <f:selectItem itemLabel="B.V.Sc" itemValue="MBA"/>
+                                                    <f:selectItem itemLabel="B.A. B.Ed" itemValue="M.COM"/>
+                                                    <f:selectItem itemLabel="B.A.LLB" itemValue="M.TECH"/>
+                                                    <f:selectItem itemLabel="B.C.J" itemValue="MBA"/>
+                                                    <f:selectItem itemLabel="B.F.I.A" itemValue="M.COM"/>
+                                                    <f:selectItem itemLabel="B.H.M.S" itemValue="M.TECH"/>
+                                                    <f:selectItem itemLabel="B.V.Sc" itemValue="MBA"/>
+                                                    <f:selectItem itemLabel="B.D.S" itemValue="MBA"/>
+                                                    <f:selectItem itemLabel="B.P.ED" itemValue="M.COM"/>
+                                                    <f:selectItem itemLabel="B.Lit" itemValue="M.TECH"/>
+                                                    <f:selectItem itemLabel="B.Des" itemValue="MBA"/>
+                                                </p:selectOneMenu>
+                                                <p:selectOneMenu id="selcity" style="width:150px;" effect="fold" filter="true" filterMatchMode="startsWith" >
+                                                     <f:selectItem itemLabel="Select City" itemValue=""/>
+                                                    <f:selectItem itemLabel="Bangalore" itemValue="Bangalore"/>
+                                                    <f:selectItem itemLabel="chennai" itemValue="chennai"/>
+                                                    <f:selectItem itemLabel="Kochi" itemValue="Kochi"/>
+                                                    <f:selectItem itemLabel="Hubli-Dharwad" itemValue="hubli-dwd"/>
+                                                    <f:selectItem itemLabel="Mysore" itemValue="mysore"/>
+                                                    <f:selectItem itemLabel="Mangalore" itemValue="mangalore"/>
+                                                    <f:selectItem itemLabel="Hyderabad" itemValue="hyderabad"/>
+                                                    <f:selectItem itemLabel="Mumbai" itemValue="mumbai"/>
+                                                    <f:selectItem itemLabel="Ahmedabad" itemValue="ahmedabad"/>
+                                                    <f:selectItem itemLabel="Pune" itemValue="pune"/>
+                                                    <f:selectItem itemLabel="Davangere" itemValue="davangere"/>
+                                                    <f:selectItem itemLabel="Belgaum" itemValue="belgaum"/>
+                                                    <f:selectItem itemLabel="Bijapur" itemValue="bijapur"/>
+                                                    <f:selectItem itemLabel="Gulbarga" itemValue="gulbarga"/>
+                                                </p:selectOneMenu>
+                                            </h:panelGrid>
+                                           <a href="moharto_available_seats_new.xhtml"><button type="button" class="btn" style="width: 50px;
+                                                                                            height: 29px;margin-left: 50px;
+                                                                                            margin-top: 10px;">GO</button></a>
+                                            <h:outputText id="sa"/>
+                                        </h:form>
+                                    </p:tab>
+                                    <p:tab id="aftr10tab" title="PG" titleStyle="tab3">
+                                        <h:form>
+                                            <h:panelGrid columns="1" style="text-align: left;">
+
+                                                <p:selectOneMenu id="selcourse" style="width:150px;" effect="fold" filter="true" filterMatchMode="startsWith" >
+                                                    <f:selectItem itemLabel="Select Course" itemValue=""/>
+                                                    <f:selectItem itemLabel="M.B.A" itemValue="M.COM"/>
+                                                    <f:selectItem itemLabel="M.A" itemValue="M.TECH"/>
+                                                    <f:selectItem itemLabel="M.Com" itemValue="MBA"/>
+                                                    <f:selectItem itemLabel="M.C.A" itemValue="M.COM"/>
+                                                    <f:selectItem itemLabel="M.Ed" itemValue="M.TECH"/>
+                                                    <f:selectItem itemLabel="M.E" itemValue="MBA"/>
+                                                    <f:selectItem itemLabel="M.Sc" itemValue="M.COM"/>
+                                                    <f:selectItem itemLabel="M.Tech" itemValue="M.TECH"/>
+                                                    <f:selectItem itemLabel="LL.M" itemValue="MBA"/>
+                                                    <f:selectItem itemLabel="M.L" itemValue="M.COM"/>
+                                                    <f:selectItem itemLabel="M.Pharma" itemValue="M.TECH"/>
+                                                    <f:selectItem itemLabel="M.Phil" itemValue="MBA"/>
+                                                    <f:selectItem itemLabel="M.D.S" itemValue="MBA"/>
+                                                    <f:selectItem itemLabel="M.A.M" itemValue="M.COM"/>
+                                                    <f:selectItem itemLabel="M.H.M" itemValue="M.TECH"/>
+                                                    <f:selectItem itemLabel="M.H.H.M" itemValue="MBA"/>
+
+                                                </p:selectOneMenu>
+                                                <p:selectOneMenu id="selcity"  style="width:150px;" effect="fold" filter="true" filterMatchMode="startsWith" >
+                                                     <f:selectItem itemLabel="Select City" itemValue=""/>
+                                                    <f:selectItem itemLabel="Bangalore" itemValue="Bangalore"/>
+                                                    <f:selectItem itemLabel="chennai" itemValue="chennai"/>
+                                                    <f:selectItem itemLabel="Kochi" itemValue="Kochi"/>
+                                                    <f:selectItem itemLabel="Hubli-Dharwad" itemValue="hubli-dwd"/>
+                                                    <f:selectItem itemLabel="Mysore" itemValue="mysore"/>
+                                                    <f:selectItem itemLabel="Mangalore" itemValue="mangalore"/>
+                                                    <f:selectItem itemLabel="Hyderabad" itemValue="hyderabad"/>
+                                                    <f:selectItem itemLabel="Mumbai" itemValue="mumbai"/>
+                                                    <f:selectItem itemLabel="Ahmedabad" itemValue="ahmedabad"/>
+                                                    <f:selectItem itemLabel="Pune" itemValue="pune"/>
+                                                    <f:selectItem itemLabel="Davangere" itemValue="davangere"/>
+                                                    <f:selectItem itemLabel="Belgaum" itemValue="belgaum"/>
+                                                    <f:selectItem itemLabel="Bijapur" itemValue="bijapur"/>
+                                                    <f:selectItem itemLabel="Gulbarga" itemValue="gulbarga"/>
+                                                </p:selectOneMenu>
+                                            </h:panelGrid>
+                                            <a href="moharto_available_seats_new.xhtml"><button type="button" class="btn" style="width: 50px;
+                                                                                            height: 29px;margin-left: 50px;
+                                                                                            margin-top: 10px;">GO</button></a>
+                                            <h:outputText id="sa" />
+                                        </h:form>
+                                    </p:tab>
+                                </p:tabView>
+                            </h:panelGrid>
+                            </div>
+                     <h:graphicImage value="../resources/images/pages/ad3.png" width="230" height="218" style="float: left;margin-top: 10px;"/>
+                        <!--<h:graphicImage value="../resources/images/pages/boy.png" width="230px" height="178px"  style="float: left;margin-top: 2px;" />-->
+                       <!-- <h:graphicImage value="../resources/images/pages/capture.png" width="230px" height="78px"  style="float: left;margin-top: 2px;" /> -->
+                    </div>
+                </h:form>
+            </div>
+        </ui:define>
+    </ui:composition>
+</html>
+

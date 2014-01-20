@@ -1,0 +1,856 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+
+        <h:outputStylesheet library="css" name="commoncontentstyle.css"/>
+        <h:outputStylesheet library="css" name="courses_view_more.css"/>
+        <style>
+            .show_stream{
+                display: none;
+            }
+            .tabview ul{
+                padding: 0px!important;
+
+            }
+
+            .tabview ui-tabs ui-tabs-nav li a{
+                padding: .5em 10px!important;
+            }
+        </style>
+    </h:head>
+
+    <!--template inclusion -->
+
+    <ui:composition template="/template/rightcolumntemplate.xhtml">
+
+        <!--include code to appear in main column (center) -->
+
+        <ui:define name='main'>
+
+                <div class="pagetitle">
+                    Courses under Moharto
+                </div>
+                <br />
+                <div class="para">
+                    Moharto intends to bring all colleges on a common platform for online admissions so that course seekers can enroll 
+                    themselves online with the college of their choice subject to selection criteria.It aims to ease the life of students who can sit 
+                    anywhere before a computer and take admission online by following few easy steps and just in matter of few minutes 
+                </div>
+                <div class="middleportion" >
+
+                    <p:tabView style="height: auto; overflow: auto;">                            
+                        <p:tab  title="PG "  >  
+                            <div class="aaa">
+                                <ul style="font-size: 13px; line-height: 30px;height: auto; margin-top: 0;">
+                                    <!--<li><a style=" text-decoration: none;"  href="moharto_course_viewmore.xhtml">MBA</a> </li>-->
+                                    <li><p:commandLink   value="Master of Business Adminstration" style=" text-decoration: none;" onclick="$('.show_stream').slideUp(300);
+                                            $(this).next('.show_stream').slideDown(300);"/>
+                                        <div class="show_stream">
+                                            <ul>
+                                                <li><p:commandLink   value="Finance" style=" text-decoration: none;" onclick="PF('dlg1').show();"/> </li>
+                                                <li><p:commandLink   value="Human Resources" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Marketing" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Marketing" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value=" IT" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value=" Economics" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value=" Hospitality and Tourism Management" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value=" Business management" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value=" Education" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Pharmaceuticals" style=" text-decoration: none;"/> </li>
+                                            </ul>
+                                        </div></li>
+
+                                    <p:dialog id="basicDialog" header="Select Location" widgetVar="dlg1">
+                                        <h:panelGrid columns="2">
+                                            <h:outputLabel for="city" value="Select Location" />
+                                            <p:selectOneMenu id="selcity" value="#{myBean.username}" style="height: 30px;" effect="fold" filter="true" filterMatchMode="startsWith">
+                                                <f:selectItem itemLabel="Bangalore" itemValue="Bangalore"/>
+                                                <f:selectItem itemLabel="chennai" itemValue="chennai"/>
+                                                <f:selectItem itemLabel="Kochi" itemValue="Kochi"/>
+                                                <f:selectItem itemLabel="Hubli-Dharwad" itemValue="hubli-dwd"/>
+                                                <f:selectItem itemLabel="Mysore" itemValue="mysore"/>
+                                                <f:selectItem itemLabel="Mangalore" itemValue="mangalore"/>
+                                                <f:selectItem itemLabel="Hyderabad" itemValue="hyderabad"/>
+                                                <f:selectItem itemLabel="Mumbai" itemValue="mumbai"/>
+                                                <f:selectItem itemLabel="Ahmedabad" itemValue="ahmedabad"/>
+                                                <f:selectItem itemLabel="Pune" itemValue="pune"/>
+                                                <f:selectItem itemLabel="Davangere" itemValue="davangere"/>
+                                                <f:selectItem itemLabel="Belgaum" itemValue="belgaum"/>
+                                                <f:selectItem itemLabel="Bijapur" itemValue="bijapur"/>
+                                                <f:selectItem itemLabel="Gulbarga" itemValue="gulbarga"/>
+                                            </p:selectOneMenu> 
+                                        </h:panelGrid>
+                                        <a href="moharto_available_seats_new.xhtml"><button type="button" class="btn" style="width: 50px;
+                                                                                            height: 29px;margin-left: 93px;
+                                                                                            margin-top: 8px;">Go</button></a>
+                                    </p:dialog>
+
+                                    <li><p:commandLink   value="Master of Technology(M.Tech)" onclick="$('.show_stream').slideUp(300);
+                                            $(this).next('.show_stream').slideDown(300);" style=" text-decoration: none;"/>
+                                        <div class="show_stream">
+                                            <ul>
+                                                <li><p:commandLink   value=" Information Security" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value=" Embedded systems" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value=" Computer Networks" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value=" Computer Networks" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value=" Robotics" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value=" Distributed Computing" style=" text-decoration: none;"/> </li>
+
+                                            </ul>
+                                        </div>
+                                    </li>
+
+                                    <li><p:commandLink   value="Master of Engineer(ME)" onclick="$('.show_stream').slideUp(300);
+                                            $(this).next('.show_stream').slideDown(300);" style=" text-decoration: none;"/>
+                                        <div class="show_stream">
+                                            <ul>
+                                                <li><p:commandLink   value="Embedded" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="VLSI" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Artificial Intelligence" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Mechanical Engineering" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Civil Engineering" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value=" Distributed Computing" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value=" Distributed Computing" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value=" Distributed Computing" style=" text-decoration: none;"/> </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li><p:commandLink   value="Master of Science (M.Sc)" onclick="$('.show_stream').slideUp(300);
+                                            $(this).next('.show_stream').slideDown(300);"  style=" text-decoration: none;"/> 
+                                        <div class="show_stream">
+                                            <ul>
+                                                <li><p:commandLink   value="MS Applied Computational Mechanics" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Master’s program in Mechatronics" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Engineering Design (M.Sc.) " style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Engineering Dynamics and Control (M.Sc.) " style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Machine Automation (M.Sc.) " style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="MS Computational Mechanical Engineering " style=" text-decoration: none;"/> </li>
+
+                                            </ul>
+
+                                        </div>
+                                    </li>
+                                    <li><p:commandLink   value="Master of Law (LLM)" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink   value="Master of Computer Application" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink   value="Master of Business Technology " style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink   value="Master of Pharmacy (M.Pharma)" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink   value="Master of Audiology  Speech Language Pathology" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink   value="Master of Business Economics" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink   value="Master of Business Laws(M.B.L)" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink   value="Master of Business Management" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink   value="Master of Computer Management" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink   value="Master of Film Management" style=" text-decoration: none; "/> </li>
+
+                                </ul>
+
+                            </div>
+
+                            <div class="bbb">
+
+                                <ul style="font-size: 13px;line-height: 30px;height: auto;float: left; ">
+                                    <li><p:commandLink   value="Master of Homeopathic Medicine and Surgery " onclick="$('.show_stream').slideUp(300);
+                                            $(this).next('.show_stream').slideDown(300);" style=" text-decoration: none; "/>
+                                        <div class="show_stream">
+                                            <ul>
+                                                <li><p:commandLink   value="Medicine in Endocrinology" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Medicine in Psychiatry" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Doctor of Medicine in philosophy" style=" text-decoration: none;"/> </li>
+                                            </ul>
+
+                                        </div>
+                                    </li>
+                                    <li><p:commandLink   value="Master of Ayurvedic Medicine and Surgery " onclick="$('.show_stream').slideUp(300);
+                                            $(this).next('.show_stream').slideDown(300);" style=" text-decoration: none; "/> 
+                                        <div class="show_stream">
+                                            <ul>
+                                                <li><p:commandLink   value="Doctor of Medicine in Ayurveda" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Master of Surgery in Ayurveda (M.S. (Ayu))." style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Mano Roga ( Psychiatry), Panchkarma (Detoxification of body)." style=" text-decoration: none;"/> </li>
+
+                                            </ul>
+
+                                        </div>
+
+                                    </li>
+                                    <li><p:commandLink   value="Doctor of Medicine (MD)" onclick="$('.show_stream').slideUp(300);
+                                            $(this).next('.show_stream').slideDown(300);" style=" text-decoration: none; "/>
+                                        <div class="show_stream">
+                                            <ul>
+                                                <li><p:commandLink   value="General Surgery" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Psychiatry and Anesthesiology" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="General Medicine and Gynaecology" style=" text-decoration: none;"/> </li>
+
+                                            </ul>
+
+                                        </div>
+                                    </li>
+                                    <li><p:commandLink   value="Master of Hospitality and Hotel Management" onclick="$('.show_stream').slideUp(300);
+                                            $(this).next('.show_stream').slideDown(300);" style=" text-decoration: none; "/>
+                                        <div class="show_stream">
+                                            <ul>
+                                                <li><p:commandLink   value="Hotel Administration." style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="B.Sc. Hospitality " style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Artificial Intelligence" style=" text-decoration: none;"/> </li>
+
+                                            </ul>
+
+                                        </div>  
+                                    </li>
+                                    <li><p:commandLink   value="Master of Physical Education" onclick="$('.show_stream').slideUp(300);
+                                            $(this).next('.show_stream').slideDown(300);" style=" text-decoration: none; "/> 
+                                        <div class="show_stream">
+                                            <ul>
+                                                <li><p:commandLink   value="Embedded" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="VLSI" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Artificial Intelligence" style=" text-decoration: none;"/> </li>
+
+                                            </ul>
+
+                                        </div>
+
+                                    </li>
+                                    <li><p:commandLink   value="Master of Education (M.Ed) " style="text-decoration: none; "/> </li>
+                                    <li><p:commandLink   value="Master of Communication Journalism" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink   value="Master of Computer Application" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink   value="MA Sociology" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink   value="Management Development Programme" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink   value="Master of Architecture(M.Arch)" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink   value="Master of Arts in Personal Management" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink   value="Master of Business Studies" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink   value="Master of Chirurgica" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink   value="Master of Comparative Laws" style=" text-decoration: none; "/> </li>
+
+                                    <!--                                        <li><p:commandLink   value="Master of Arts in Management" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="Master of Arts in Theatre Television" style=" text-decoration: none; "/> </li>-->
+
+                                    <!--                                        <li><p:commandLink   value="MSc Electronics Instrumentation," style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="MSc Environmental Chemistry" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="MSc Environmental Sciences" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="MSc Fishery Science" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="MSc Food, Nutrition Drugs and Water" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="MSc Foods, Nutrition Dietetics" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="MSc Geography B.A(Stream)" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="MSc Geography - B.Sc.(Stream)" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="MSc Geology" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="MSc Geophysics" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="MSc Human Genetics" style=" text-decoration: none; "/> </li>
+                                                                          
+                                                                            <li><p:commandLink   value="MSc Marine Biology and Fisheries" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="MSc Marine Biotechnology" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="MSc Marine Chemistry" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="MSc Marine Geology" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="MSc Marine Geophysics" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="MSc Meteorology" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="MSc Microbiology" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="MSc Nuclear Chemistry" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="MSc Nuclear Physics" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="MSc Organic Chemistry" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="MSc Physical Chemistry" style=" text-decoration: none; "/> </li>-->
+
+                                </ul>
+
+                            </div>
+
+
+                        </p:tab>
+
+                        <p:tab  title="UG " >  
+
+                            <p id="tab1a" >Course Under UG:</p>
+
+                            <div class="aaa">
+
+                                <ul style="font-size: 13px; line-height: 30px; margin-top: 0px">
+                                    <li><p:commandLink   value="Bachelor of Engineering "  onclick="$('.show_stream').slideUp(300);
+                                            $(this).next('.show_stream').slideDown(300);" style=" text-decoration: none; "/>
+                                        <div class="show_stream">
+                                            <ul>
+                                                <li><p:commandLink   value="Mechanical Engineering" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Electrical Engineering" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Information and technology" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Civil Engineering" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Electronics and communication Engineering" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Automobile  Engineering" style=" text-decoration: none;"/> </li>
+
+                                            </ul>
+
+                                        </div>
+                                    </li>
+                                    <li><p:commandLink   value="Bachelor of Business Administration"  onclick="$('.show_stream').slideUp(300);
+                                            $(this).next('.show_stream').slideDown(300);" style=" text-decoration: none; "/> 
+
+                                        <div class="show_stream">
+                                            <ul>
+
+
+                                                <li><p:commandLink   value="Corporate Finance" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Principle of Real State " style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Investment Banking" style=" text-decoration: none;"/> </li>
+
+                                            </ul>
+
+
+                                        </div>
+
+                                    </li>
+
+                                    <li><p:commandLink   value="Bachelor of Arts"  onclick="$('.show_stream').slideUp(300);
+                                            $(this).next('.show_stream').slideDown(300);" style=" text-decoration: none; "/>
+                                        <div class="show_stream">
+                                            <ul>
+                                                <li><p:commandLink   value=" English" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value=" History" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value=" Kannada" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value=" Geography" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value=" urdu" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value=" Economics" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value=" Fashion" style=" text-decoration: none;"/> </li>
+
+                                            </ul>
+
+                                        </div>
+                                    </li>
+
+                                    <li><p:commandLink   value="Bachelor of Commerce " onclick="$('.show_stream').slideUp(300);
+                                            $(this).next('.show_stream').slideDown(300);" style="text-decoration: none; "/> 
+                                        <div class="show_stream">
+                                            <ul>
+                                                <li><p:commandLink   value="Elements of Costing" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Elements of Income-Tax" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Business Organization" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Money, Banking and Financial Institutions" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Economic Development and Policy" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Elements of Statistics" style=" text-decoration: none;"/> </li>
+
+
+                                            </ul>
+                                        </div>
+                                    </li>
+
+                                    <li><p:commandLink   value="Bachelor of Technology "  onclick="$('.show_stream').slideUp(300);
+                                            $(this).next('.show_stream').slideDown(300);" style=" text-decoration: none; "/>
+                                        <div class="show_stream">
+                                            <ul>
+                                                <li><p:commandLink   value="Mechanical Engineering" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Electrical Engineering" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Computer Science and Engineering" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Civil Engineering" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="ECE Engineering" style=" text-decoration: none;"/> </li>
+
+
+
+                                            </ul>
+
+                                        </div>
+                                    </li>
+
+
+
+                                    <li><p:commandLink   value="Bachelor of Communication Journalism" onclick="$('.show_stream').slideUp(300);
+                                            $(this).next('.show_stream').slideDown(300);" style=" text-decoration: none;"/> 
+
+                                        <div class="show_stream">
+                                            <ul>
+                                                <li><p:commandLink   value="Embedded" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="VLSI" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Artificial Intelligence" style=" text-decoration: none;"/> </li>
+                                            </ul>
+                                        </div>
+
+                                    </li>
+                                    <li><p:commandLink   value="Bachelor of Computer Applications" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink   value="Bachelor of Arts Bachelor of Education" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink   value="Bachelor of Business Administration Bachelor of Law" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink   value="Bachelor of Business Administration" style=" text-decoration: none; "/> </li>
+                                    <!--                                        <li><p:commandLink   value="Bachelor of Business Studies" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="Bachelor of Commerce" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="Bachelor of Communication Journalism" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="Bachelor of Computer Science(B.C.S)" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="Bachelor of Design(B.Des)" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="Bachelor of education in Artificial Intelligence" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="Bachelor of Electronic Science(B.E.S)" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="Bachelor of Elementary Education(B.EL.Ed)" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="Bachelor of Fashion Technology(B.F.Tech)" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="Bachelor of Financial Investment and Analysis" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="Bachelor of Fine Arts(B.F.A)" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="Bachelor of Fishery Sciences(B.F.S)" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="Bachelor of General Law(B.G.L)" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="Bachelor of Hospitality and Tourism Management" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="Bachelor of Hotel Management(B.H.M)" style=" text-decoration: none; "/> </li>-->
+                                    <!--                                        <li><p:commandLink   value="Bachelor of Information Systems Management(B.I.S.M)" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="Bachelor of Labour Management(B.L.M)" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="Bachelor of Laws(B.L)" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="Bachelor of Library and Information Science" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="Bachelor of Literature(B.Lit)" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="Bachelor of Medical Laboratory Technology" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="Bachelor of Medical Record Science(B.M.R.Sc)" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="Bachelor of Medical Technology(B.M.T)" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="Bachelor of Medicine Bachelor of Surgery" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="Bachelor of Mental Retardation(B.M.R)" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="Bachelor of Naturopathy and Yogic Sciences" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="Bachelor of Occupational Therapy(B.O.T)" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="Bachelor of Occupational Therapy(B.O.Th)" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="Bachelor of Optometry and Vision Science" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="Bachelor of Physical Education(B.P.E)" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="Bachelor Of Physical Education(B.P.Ed)" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="Bachelor of Physiotherapy(B.P.T)" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="Bachelor of Public Relations(B.P.R)" style=" text-decoration: none; "/> </li>-->
+                                    <!--                                        <li><p:commandLink   value="Bachelor of Science Bachelor of Education" style=" text-decoration: none; "/> </li>-->
+
+
+
+
+
+
+                                </ul>
+
+                            </div>
+
+                            <div class="bbb">
+
+
+                                <ul style="font-size: 13px; line-height: 30px;">
+                                    <li><p:commandLink   value="Bachelor Hotel Management" onclick="$('.show_stream').slideUp(300);
+                                            $(this).next('.show_stream').slideDown(300);" style=" text-decoration: none;"/> 
+
+
+                                        <div class="show_stream">
+                                            <ul>
+                                                <li><p:commandLink   value="Sales and Marketing for Hospitality Businesses" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="The Contemporary Hospitality and Tourism Industry" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Food and Beverage Service Standards" style=" text-decoration: none;"/> </li>
+                                            </ul>
+                                        </div>
+
+                                    </li>
+
+                                    <li><p:commandLink   value="Bachelor of Applied Sciences" onclick="$('.show_stream').slideUp(300);
+                                            $(this).next('.show_stream').slideDown(300);" style=" text-decoration: none;"/> 
+
+
+                                        <div class="show_stream">
+                                            <ul>
+                                                <li><p:commandLink   value="Equine Science" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Corp Production" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Production Animal Science" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Veterinary Technology" style=" text-decoration: none;"/> </li>
+                                            </ul>
+                                        </div>
+
+                                    </li>
+
+                                    <li><p:commandLink   value="Bachelor of Architecture" onclick="$('.show_stream').slideUp(300);
+                                            $(this).next('.show_stream').slideDown(300);" style=" text-decoration: none;"/> 
+
+
+                                        <div class="show_stream">
+                                            <ul>
+                                                <li><p:commandLink   value="Sustainable Development" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Transport and Infrastructure Planning" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Urban design" style=" text-decoration: none;"/> </li>
+                                            </ul>
+                                        </div>
+
+                                    </li>
+
+                                    <li><p:commandLink   value="Bachelor Library Science" onclick="$('.show_stream').slideUp(300);
+                                            $(this).next('.show_stream').slideDown(300);"  style=" text-decoration: none;"/> 
+
+
+                                        <div class="show_stream">
+                                            <ul>
+                                                <li><p:commandLink   value="Embedded" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="VLSI" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Artificial Intelligence" style=" text-decoration: none;"/> </li>
+                                            </ul>
+                                        </div>
+
+                                    </li>
+
+
+                                    <li><p:commandLink   value="Bachelor of Arts and Education" onclick="$('.show_stream').slideUp(300);
+                                            $(this).next('.show_stream').slideDown(300);" style=" text-decoration: none;"/>
+
+
+                                        <div class="show_stream">
+                                            <ul>
+                                                <li><p:commandLink   value="Embedded" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="VLSI" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Artificial Intelligence" style=" text-decoration: none;"/> </li>
+                                            </ul>
+                                        </div>
+
+                                    </li>
+                                    <li><p:commandLink   value="Bachelor of Arts and Law" onclick="$('.show_stream').slideUp(300);
+                                            $(this).next('.show_stream').slideDown(300);" style=" text-decoration: none;"/> 
+
+
+
+                                    </li>
+
+                                    <li><p:commandLink   value="Bachelor of Audiology" onclick="$('.show_stream').slideUp(300);
+                                            $(this).next('.show_stream').slideDown(300);" style=" text-decoration: none;"/> 
+
+
+                                        <div class="show_stream">
+                                            <ul>
+                                                <li><p:commandLink   value="Embedded" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="VLSI" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Artificial Intelligence" style=" text-decoration: none;"/> </li>
+                                            </ul>
+                                        </div>
+
+                                    </li>
+                                    <li><p:commandLink   value="Bachelor of Commerce(B.Com)" onclick="$('.show_stream').slideUp(300);
+                                            $(this).next('.show_stream').slideDown(300);" style=" text-decoration: none;"/>
+
+
+                                        <div class="show_stream">
+                                            <ul>
+                                                <li><p:commandLink   value="Embedded" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="VLSI" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Artificial Intelligence" style=" text-decoration: none;"/> </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li><p:commandLink   value="Bachelor of Business Studies(B.B.S)" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink   value="Bachelor of Communication Journalism" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink   value="Bachelor of Dental Surgery(B.D.S)" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink   value="Bachelor of Naturopathy and Yogic Sciences" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink   value="Bachelor of Occupational Therapy(B.O.T)" style=" text-decoration: none;"/> </li><!--
+                                    <li><p:commandLink   value="Bachelor of Occupational Therapy(B.O.Th)" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink   value="Bachelor of Pharmacy(B.Pharma)" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink   value="Bachelor of Physical Education(B.P.E)" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink   value="Bachelor Of Physical Education(B.P.Ed)" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink   value="Bachelor of Physiotherapy(B.P.T)" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink   value="Bachelor of Public Relations(B.P.R)" style=" text-decoration: none;"/> </li>-->
+                                    <!--                                        <li><p:commandLink   value="Bachelor of Science Bachelor of Education" style=" text-decoration: none;"/> </li>
+                                                                            <li><p:commandLink   value="Bachelor of Science Education(B.S.E)" style=" text-decoration: none;"/> </li>
+                                                                            <li><p:commandLink   value="Bachelor of Science in Education(B.Sc.Ed)" style=" text-decoration: none;"/> </li>
+                                                                            <li><p:commandLink   value="Bachelor of Science(B.S)" style=" text-decoration: none;"/> </li>
+                                                                            <li><p:commandLink   value="Bachelor of Siddha Medical Sciences(B.S.M.S)" style=" text-decoration: none;"/> </li>
+                                                                            <li><p:commandLink   value="Bachelor Of Social Work(B.S.W)" style=" text-decoration: none;"/> </li>
+                                                                            <li><p:commandLink   value="Bachelor of Socio Legal Sciences Bachelor of Laws" style=" text-decoration: none;"/> </li>
+                                                                            <li><p:commandLink   value="Bachelor of Tourism Administration" style=" text-decoration: none;"/> </li>
+                                                                            <li><p:commandLink   value="Bachelor of Veterinary Science" style=" text-decoration: none;"/> </li>-->
+                                    <!--                                        <li><p:commandLink   value="Basic Training Certificate(B.T.C)" style=" text-decoration: none;"/> </li>
+                                                                            <li><p:commandLink   value="Behavioral Healthcare Education(B.H.Ed)" style=" text-decoration: none;"/> </li>
+                                                                            <li><p:commandLink   value="Under Graduate Basic Training(U.G.B.T)" style=" text-decoration: none;"/> </li>
+                                                                            <li><p:commandLink   value="Bachelor of Tourism Administration(B.T.A)" style=" text-decoration: none;"/> </li>
+                                                                            <li><p:commandLink   value="Bachelor of Unani Medicine Surgery(B.U.M.S)" style=" text-decoration: none;"/> </li>-->
+                                    <!--                                        <li><p:commandLink   value="Bachelor of Unani Medicine Surgery" style=" text-decoration: none;"/> </li>
+                                                                            <li><p:commandLink   value="Bachelor of Veterinary Science(B.V.Sc)" style=" text-decoration: none;"/> </li>
+                                                                            <li><p:commandLink   value="Behavioral Healthcare Education(B.H.Ed)" style=" text-decoration: none;"/> </li>
+                                                                            <li><p:commandLink   value="Under Graduate Basic Training(U.G.B.T)" style=" text-decoration: none;"/> </li>
+                                                                            <li><p:commandLink   value="Under Graduate Teacher Training(U.G.T.T)" style=" text-decoration: none;"/> </li>
+                                                                            <li><p:commandLink   value="Under Graduate Training(U.G.T)" style=" text-decoration: none;"/> </li>
+                                                                            <li><p:commandLink   value="Bachelor of Applied Sciences(B.A.S)" style=" text-decoration: none;"/> </li>
+                                                                            <li><p:commandLink   value="Bachelor of Arts Bachelor of Education" style=" text-decoration: none;"/> </li>
+                                                                            <li><p:commandLink   value="Bachelor of Science Education(B.S.E)" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="Bachelor of Science in Education(B.Sc.Ed)" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="Bachelor of Science(B.S)" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="Under Graduate Training(U.G.T)" style=" text-decoration: none;"/> </li>
+                                                                            <li><p:commandLink   value="Bachelor of Siddha Medical Sciences(B.S.M.S)" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="Bachelor Of Social Work(B.S.W)" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="Bachelor of Speech Language Audiology" style=" text-decoration: none; "/> </li>
+                                                                            <li><p:commandLink   value="Under Graduate Training(U.G.T)" style=" text-decoration: none;"/> </li>-->
+
+
+                                </ul>
+
+                            </div>
+
+                        </p:tab>
+
+                        <p:tab  title="After 10th " >  
+
+                            <p id="tab1a">Course  After 10th:</p>
+
+                            <div class="aaa">
+
+                                <ul style="font-size: 13px; line-height: 30px;">
+                                    <li><p:commandLink   value="Diploma engineering" onclick="$('.show_stream').slideUp(300);
+                                            $(this).next('.show_stream').slideDown(300);" style=" text-decoration: none; "/> 
+
+                                        <div class="show_stream">
+                                            <ul>
+                                                <li><p:commandLink   value=" Mechanical Engineering" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value=" Civil Engineering" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value=" Computerscience" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value=" Electronics and Communication" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value=" Electrical Engineering" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value=" Automobiles" style=" text-decoration: none;"/> </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li><p:commandLink   value="ITI" onclick="$('.show_stream').slideUp(300);
+                                            $(this).next('.show_stream').slideDown(300);" style=" text-decoration: none; "/> 
+
+                                        <div class="show_stream">
+                                            <ul>
+                                                <li><p:commandLink   value="Tool and Die Maker" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Draughtsman (Mechanical)" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Information Technology and E.S.M." style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Mechanic Motor Vehicle" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Mechanic Radio and T.V." style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Mechanic Electronics" style=" text-decoration: none;"/> </li>
+                                            </ul>
+                                        </div>
+
+                                    </li>
+                                    <li><p:commandLink   value="Diploma in Pharmecy" onclick="$('.show_stream').slideUp(300);
+                                            $(this).next('.show_stream').slideDown(300);" style=" text-decoration: none;"/>
+
+                                        <div class="show_stream">
+                                            <ul>
+                                                <li><p:commandLink   value=" Ayurvedic Pharmacy" style=" text-decoration: none;"/> </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li><p:commandLink   value="Diploma in Tool and Die making" onclick="$('.show_stream').slideUp(300);
+                                            $(this).next('.show_stream').slideDown(300);" style=" text-decoration: none; "/> 
+
+                                    </li>
+
+                                    <li><p:commandLink   value="Diploma in Mass Comm." style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink   value="Nursing" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink   value="TTC" style=" text-decoration: none;"/> </li>
+
+                                </ul>
+
+                            </div>
+
+                            <div class="ccc">
+
+                                <ul style="font-size: 13px; line-height: 30px;margin-top: 343px;">
+                                    <li><p:commandLink   value="PUC" onclick="$('.show_stream').slideUp(300);
+                                            $(this).next('.show_stream').slideDown(300);" style=" text-decoration: none;"/>
+
+
+                                        <div class="show_stream">
+                                            <ul>
+                                                <li><p:commandLink   value="Science" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Commerce" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Arts" style=" text-decoration: none;"/> </li>
+
+                                            </ul>
+                                        </div>
+
+
+                                    </li>
+                                    <li><p:commandLink   value="Diploma in Medicine" onclick="$('.show_stream').slideUp(300);
+                                            $(this).next('.show_stream').slideDown(300);" style=" text-decoration: none;"/>
+
+
+                                        <div class="show_stream">
+                                            <ul>
+                                                <li><p:commandLink   value="Diploma in Medical Lab Technician" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Diploma in Dialysis and Physiotherapy" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value=" Diploma In Medical Equipments" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink value="Diploma in Radiology" style=" text-decoration: none;"/></li>
+                                            </ul>
+                                        </div>
+
+                                    </li>
+                                    <li><p:commandLink   value="Diploma in Fashion" onclick="$('.show_stream').slideUp(300);
+                                            $(this).next('.show_stream').slideDown(300);" style=" text-decoration: none;"/> 
+
+                                        <div class="show_stream">
+                                            <ul>
+                                                <li><p:commandLink   value="Diploma in Fashion Photography" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Diploma in Visual Merchandising" style=" text-decoration: none;"/> </li>
+                                                <li><p:commandLink   value="Diploma in Textile Design" style=" text-decoration: none;"/> </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li><p:commandLink   value="CA" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink   value="PUC with MEC" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink   value="Diploma in Music" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink   value="Diploma in Audiology" style=" text-decoration: none;"/> </li>
+                                    <!--                                        <li><p:commandLink   value="Diploma in Computers" style=" text-decoration: none;"/> </li>-->
+                                </ul>
+                            </div>
+                        </p:tab>
+
+                    </p:tabView>
+                </div>
+        
+        </ui:define>
+
+
+        <!--include code to appear in right column -->
+
+        <ui:define name='rightcolumn'>
+            <div class="iwanttodo">
+
+                <div class="blocktitle">
+                    <center>
+                        I Want To Do
+                    </center>
+                </div>
+
+                <p:tabView id="tv" style="padding-left: 0px;padding-right: 0px;border: 0px;"  effect="slide" styleClass="tabview">
+                    <p:tab id="pgtab" title="After 10th" titleStyleClass="tab1" >
+                        <h:form>
+                            <h:panelGrid columns="1" style="text-align: left;">
+                                <p:selectOneMenu id="selcourse" value="#{myBean.username}" style="width:150px;" effect="fold" filter="true" filterMatchMode="startsWith" >
+                                    <f:selectItem itemLabel="Select Course" itemValue=""/>
+                                    <f:selectItem itemLabel="PUC" itemValue="22"/>
+                                    <f:selectItem itemLabel="Diploma" itemValue="23"/>
+                                    <f:selectItem itemLabel="ITI" itemValue="24"/>
+                                    <f:selectItem itemLabel="Nursing" itemValue="24"/>
+                                </p:selectOneMenu>
+                                <p:selectOneMenu id="selcity" value="#{myBean.username}" style="width:150px;" effect="fold" filter="true" filterMatchMode="startsWith" >
+                                    <f:selectItem itemLabel="Select City" itemValue=""/>
+                                    <f:selectItem itemLabel="Bangalore" itemValue="Bangalore"/>
+                                    <f:selectItem itemLabel="chennai" itemValue="chennai"/>
+                                    <f:selectItem itemLabel="Kochi" itemValue="Kochi"/>
+                                    <f:selectItem itemLabel="Hubli-Dharwad" itemValue="hubli-dwd"/>
+                                    <f:selectItem itemLabel="Mysore" itemValue="mysore"/>
+                                    <f:selectItem itemLabel="Mangalore" itemValue="mangalore"/>
+                                    <f:selectItem itemLabel="Hyderabad" itemValue="hyderabad"/>
+                                    <f:selectItem itemLabel="Mumbai" itemValue="mumbai"/>
+                                    <f:selectItem itemLabel="Ahmedabad" itemValue="ahmedabad"/>
+                                    <f:selectItem itemLabel="Pune" itemValue="pune"/>
+                                    <f:selectItem itemLabel="Davangere" itemValue="davangere"/>
+                                    <f:selectItem itemLabel="Belgaum" itemValue="belgaum"/>
+                                    <f:selectItem itemLabel="Bijapur" itemValue="bijapur"/>
+                                    <f:selectItem itemLabel="Gulbarga" itemValue="gulbarga"/>
+                                </p:selectOneMenu>
+                            </h:panelGrid>
+                            <a href="moharto_available_seats_new.xhtml"><button type="button" class="btn" style="width: 50px;
+                                                                                height: 29px;margin-left: 50px;
+                                                                                margin-top: 10px;">GO</button></a>
+                            <h:outputText id="sa" value="#{myBean.password}"/>
+                        </h:form>
+                    </p:tab>
+                    <p:tab id="ugtab" title="After 12th" titleStyleClass="tab2">
+                        <h:form>
+                            <h:panelGrid columns="1" style="text-align: left;" >
+                                <p:selectOneMenu id="selcourse" value="#{myBean.username}" style="width:150px;" effect="fold" filter="true" filterMatchMode="startsWith">
+                                    <f:selectItem itemLabel="Select Course" itemValue=""/>
+                                    <f:selectItem itemLabel="B.E" itemValue="M.COM"/>
+                                    <f:selectItem itemLabel="B.Tech" itemValue="M.TECH"/>
+                                    <f:selectItem itemLabel="B.B.M" itemValue="M.COM"/>
+                                    <f:selectItem itemLabel="B.B.A" itemValue="M.TECH"/>
+                                    <f:selectItem itemLabel="B.Com" itemValue="MBA"/>
+                                    <f:selectItem itemLabel="B.C.A" itemValue="M.COM"/>
+                                    <f:selectItem itemLabel="B.C.S" itemValue="M.TECH"/>
+                                    <f:selectItem itemLabel="B.D.S" itemValue="MBA"/>
+                                    <f:selectItem itemLabel="B.Ed" itemValue="M.COM"/>
+                                    <f:selectItem itemLabel="B.F.Tech" itemValue="M.TECH"/>
+                                    <f:selectItem itemLabel="B.H.M" itemValue="MBA"/>
+                                    <f:selectItem itemLabel="B.L" itemValue="M.COM"/>
+                                    <f:selectItem itemLabel="B.Pharma" itemValue="M.TECH"/>
+                                    <f:selectItem itemLabel="B.Sc.Ed" itemValue="M.COM"/>
+                                    <f:selectItem itemLabel="B.Sc" itemValue="M.TECH"/>
+                                    <f:selectItem itemLabel="B.V.Sc" itemValue="MBA"/>
+                                    <f:selectItem itemLabel="B.A. B.Ed" itemValue="M.COM"/>
+                                    <f:selectItem itemLabel="B.A.LLB" itemValue="M.TECH"/>
+                                    <f:selectItem itemLabel="B.C.J" itemValue="MBA"/>
+                                    <f:selectItem itemLabel="B.F.I.A" itemValue="M.COM"/>
+                                    <f:selectItem itemLabel="B.H.M.S" itemValue="M.TECH"/>
+                                    <f:selectItem itemLabel="B.V.Sc" itemValue="MBA"/>
+                                    <f:selectItem itemLabel="B.D.S" itemValue="MBA"/>
+                                    <f:selectItem itemLabel="B.P.ED" itemValue="M.COM"/>
+                                    <f:selectItem itemLabel="B.Lit" itemValue="M.TECH"/>
+                                    <f:selectItem itemLabel="B.Des" itemValue="MBA"/>
+                                </p:selectOneMenu>
+                                <p:selectOneMenu id="selcity" value="#{myBean.username}" style="width:150px;" effect="fold" filter="true" filterMatchMode="startsWith" >
+                                    <f:selectItem itemLabel="Select City" itemValue=""/>
+                                    <f:selectItem itemLabel="Bangalore" itemValue="Bangalore"/>
+                                    <f:selectItem itemLabel="chennai" itemValue="chennai"/>
+                                    <f:selectItem itemLabel="Kochi" itemValue="Kochi"/>
+                                    <f:selectItem itemLabel="Hubli-Dharwad" itemValue="hubli-dwd"/>
+                                    <f:selectItem itemLabel="Mysore" itemValue="mysore"/>
+                                    <f:selectItem itemLabel="Mangalore" itemValue="mangalore"/>
+                                    <f:selectItem itemLabel="Hyderabad" itemValue="hyderabad"/>
+                                    <f:selectItem itemLabel="Mumbai" itemValue="mumbai"/>
+                                    <f:selectItem itemLabel="Ahmedabad" itemValue="ahmedabad"/>
+                                    <f:selectItem itemLabel="Pune" itemValue="pune"/>
+                                    <f:selectItem itemLabel="Davangere" itemValue="davangere"/>
+                                    <f:selectItem itemLabel="Belgaum" itemValue="belgaum"/>
+                                    <f:selectItem itemLabel="Bijapur" itemValue="bijapur"/>
+                                    <f:selectItem itemLabel="Gulbarga" itemValue="gulbarga"/>
+                                </p:selectOneMenu>
+                            </h:panelGrid>
+                            <a href="moharto_available_seats_new.xhtml"><button type="button" class="btn" style="width: 50px;
+                                                                                height: 29px;margin-left: 50px;
+                                                                                margin-top: 10px;">GO</button></a>
+                            <h:outputText id="sa" value=" #{myBean.password}"/>
+                        </h:form>
+                    </p:tab>
+                    <p:tab id="aftr10tab" title="PG" titleStyle="tab3">
+                        <h:form>
+                            <h:panelGrid columns="1" style="text-align: left;">
+
+                                <p:selectOneMenu id="selcourse" value="#{myBean.username}" style="width:150px;" effect="fold" filter="true" filterMatchMode="startsWith" >
+                                    <f:selectItem itemLabel="Select Course" itemValue=""/>
+                                    <f:selectItem itemLabel="M.B.A" itemValue="M.COM"/>
+                                    <f:selectItem itemLabel="M.A" itemValue="M.TECH"/>
+                                    <f:selectItem itemLabel="M.Com" itemValue="MBA"/>
+                                    <f:selectItem itemLabel="M.C.A" itemValue="M.COM"/>
+                                    <f:selectItem itemLabel="M.Ed" itemValue="M.TECH"/>
+                                    <f:selectItem itemLabel="M.E" itemValue="MBA"/>
+                                    <f:selectItem itemLabel="M.Sc" itemValue="M.COM"/>
+                                    <f:selectItem itemLabel="M.Tech" itemValue="M.TECH"/>
+                                    <f:selectItem itemLabel="LL.M" itemValue="MBA"/>
+                                    <f:selectItem itemLabel="M.L" itemValue="M.COM"/>
+                                    <f:selectItem itemLabel="M.Pharma" itemValue="M.TECH"/>
+                                    <f:selectItem itemLabel="M.Phil" itemValue="MBA"/>
+                                    <f:selectItem itemLabel="M.D.S" itemValue="MBA"/>
+                                    <f:selectItem itemLabel="M.A.M" itemValue="M.COM"/>
+                                    <f:selectItem itemLabel="M.H.M" itemValue="M.TECH"/>
+                                    <f:selectItem itemLabel="M.H.H.M" itemValue="MBA"/>
+
+                                </p:selectOneMenu>
+                                <p:selectOneMenu id="selcity" value="#{myBean.username}" style="width:150px;" effect="fold" filter="true" filterMatchMode="startsWith" >
+                                    <f:selectItem itemLabel="Select City" itemValue=""/>
+                                    <f:selectItem itemLabel="Bangalore" itemValue="Bangalore"/>
+                                    <f:selectItem itemLabel="chennai" itemValue="chennai"/>
+                                    <f:selectItem itemLabel="Kochi" itemValue="Kochi"/>
+                                    <f:selectItem itemLabel="Hubli-Dharwad" itemValue="hubli-dwd"/>
+                                    <f:selectItem itemLabel="Mysore" itemValue="mysore"/>
+                                    <f:selectItem itemLabel="Mangalore" itemValue="mangalore"/>
+                                    <f:selectItem itemLabel="Hyderabad" itemValue="hyderabad"/>
+                                    <f:selectItem itemLabel="Mumbai" itemValue="mumbai"/>
+                                    <f:selectItem itemLabel="Ahmedabad" itemValue="ahmedabad"/>
+                                    <f:selectItem itemLabel="Pune" itemValue="pune"/>
+                                    <f:selectItem itemLabel="Davangere" itemValue="davangere"/>
+                                    <f:selectItem itemLabel="Belgaum" itemValue="belgaum"/>
+                                    <f:selectItem itemLabel="Bijapur" itemValue="bijapur"/>
+                                    <f:selectItem itemLabel="Gulbarga" itemValue="gulbarga"/>
+                                </p:selectOneMenu>
+                            </h:panelGrid>
+                            <a href="moharto_available_seats_new.xhtml">
+                                <button type="button" class="btn" style="width: 50px;
+                                        height: 29px;margin-left: 50px;
+                                        margin-top: 10px;">GO</button>
+                            </a>
+                            <h:outputText id="sa" value=" #{myBean.password}"/>
+                        </h:form>
+                    </p:tab>
+                </p:tabView>
+
+            </div>
+            <h:graphicImage value="../resources/images/pages/Untitled.png" style="float: left;
+                            width: 230px;
+                            height: 418px;
+                            margin-top: 10px;
+                            margin-left: 0px;
+
+                            "/>
+
+
+        </ui:define>
+
+
+    </ui:composition>
+</html>
+
+

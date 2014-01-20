@@ -1,0 +1,257 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <h:outputStylesheet library="css" name="moharto_scholarships.css"/>
+
+        <style>
+            .tab1 {
+                width: 80px;
+            }
+            .tab2 {
+                width: 80px;
+            }
+            .tabview ul{
+                padding: 0px!important;
+
+            }
+
+            .tabview ui-tabs ui-tabs-nav li a{
+                padding: .5em 10px!important;
+            }
+        </style>
+    </h:head>
+    <ui:composition template="/template/commonTemplate.xhtml">
+
+        <ui:define name='pageContent'>
+            <f:view>
+                <div class="scholarships_maincontainer">
+
+                    <div class="scholarships_leftcontainer">
+                        <h:outputLabel value="Scholarships" style="font-size: 15px;font-weight: bold;color: #49a4c8;"/>
+
+                        <div style="width: 738px;font-size: 13px;border: 1px solid #ddd;border-radius: 5px;margin-top: 10px;">
+                            <div style="padding: 5px;">
+                                <h:outputLabel value="SRM University" style="font-size: 15px;font-weight: bold;color: black;"/> 
+                                <p>
+                                    SRM University offers several scholarships, fee waiver schemes, 
+                                    teaching and research assistance to meritorious and deserving students. 
+                                    Large number of students tremendously benefit from such schemes. In 2007-08, 
+                                    close to 750 students benefited from various schemes and 1500 in 2008-09. 
+                                    SRM has earmarked a large fund of Rs 11. 9 Crores in 2010-11 for this purpose.
+                                </p>
+
+                                <p>
+                                    With the objective of encouraging meritorious students and academic excellence,
+                                    many scholarships are offered for deserving candidates.
+                                    The quantum of scholarship and the number of scholarships are subject to change from time to time.
+                                    Changes,if any will be updated in our website. 
+                                </p>
+                                <div style="float: right;">
+                                    <h:form>
+                                        <h:commandLink value="View More" style="font-size: 15px;color: sienna;margin-top: -10px;" onmouseover="this.style.text - decoration = 'underline'" />
+                                    </h:form> 
+                                </div>
+                                <br/>
+                                <br/>
+
+                            </div>
+                            <!-- -->
+
+                            
+                        </div>
+                        
+                                                    <div style="width: 738px;font-size: 13px;border: 1px solid #ddd;border-radius: 5px;margin-top: 20px;">
+                                <div style="padding: 5px;">
+                                    <h:outputLabel value="VIT University" style="font-size: 15px;font-weight: bold;color: black;"/> 
+                                    <p>
+                                        Awards and Rewards
+                                        Distribution of Scholarships / Awards -  University Day - From 2008-09 onwards 
+                                        It is proposed to adopt the following scheme of scholarship / award distribution from the academic year 2008-2009 onwards. 
+                                        All the awards shall be based on Merit (ie., based on the marks obtained in the examination and as per the rank list furnished by the COE).
+                                        1) Re-admitted / Re-registered / Debarred candidates are not eligible for scholarship / award and their names will not be considered for the total strength calculations. 
+
+                                        2) Only the candidates who have passed all the examinations in the first appearance are eligible for Scholarship / Award. (Supplementary marks are not considered).	
+
+                                        3)  Awards will be given to the students who have more than 75% attendance and have no disciplinary proceedings against them.
+                                    </p>
+
+                                    <p>
+                                        With the objective of encouraging meritorious students and academic excellence,
+                                        many scholarships are offered for deserving candidates.
+                                        The quantum of scholarship and the number of scholarships are subject to change from time to time.
+                                        Changes,if any will be updated in our website. 
+                                    </p>
+                                    <div style="float: right;">
+                                        <h:form>
+                                            <h:commandLink value="View More" style="font-size: 15px;color: sienna;margin-top: -10px;" onmouseover="this.style.text - decoration = 'underline'" />
+                                        </h:form> 
+                                    </div>
+                                    <br/>
+                                    <br/>
+
+                                </div>
+                            </div>
+                    </div>
+                    <div class="scholarships_rightcontainer"  style="margin-left: 10px;">
+                        <div style="border: 1px solid #ddd;border-radius: 4px;width: 230px;">
+                            <br/>
+                            <center><h:outputLabel value="I Want To Do" style="font-size: 12px;font-weight: bold;"/></center>
+                            <br/>
+                            <h:panelGrid columns="2" >
+                                <p:tabView id="tv" style="padding-left: 0px;padding-right: 0px;border: 0px;"  effect="slide" styleClass="tabview">
+                                    <p:tab id="pgtab" title="After 10th" titleStyleClass="tab1" >
+                                        <h:form>
+                                            <h:panelGrid columns="1" style="text-align: left;">
+                                                <p:selectOneMenu id="selcourse" value="#{myBean.username}" style="width:150px;" effect="fold" filter="true" filterMatchMode="startsWith" >
+                                                    <f:selectItem itemLabel="Select Course" itemValue=""/>
+                                                    <f:selectItem itemLabel="PUC" itemValue="22"/>
+                                                    <f:selectItem itemLabel="Diploma" itemValue="23"/>
+                                                    <f:selectItem itemLabel="ITI" itemValue="24"/>
+                                                    <f:selectItem itemLabel="Nursing" itemValue="24"/>
+                                                </p:selectOneMenu>
+                                                <p:selectOneMenu id="selcity" value="#{myBean.username}" style="width:150px;" effect="fold" filter="true" filterMatchMode="startsWith" >
+                                                    <f:selectItem itemLabel="Select City" itemValue=""/>
+                                                    <f:selectItem itemLabel="Bangalore" itemValue="Bangalore"/>
+                                                    <f:selectItem itemLabel="chennai" itemValue="chennai"/>
+                                                    <f:selectItem itemLabel="Kochi" itemValue="Kochi"/>
+                                                    <f:selectItem itemLabel="Hubli-Dharwad" itemValue="hubli-dwd"/>
+                                                    <f:selectItem itemLabel="Mysore" itemValue="mysore"/>
+                                                    <f:selectItem itemLabel="Mangalore" itemValue="mangalore"/>
+                                                    <f:selectItem itemLabel="Hyderabad" itemValue="hyderabad"/>
+                                                    <f:selectItem itemLabel="Mumbai" itemValue="mumbai"/>
+                                                    <f:selectItem itemLabel="Ahmedabad" itemValue="ahmedabad"/>
+                                                    <f:selectItem itemLabel="Pune" itemValue="pune"/>
+                                                    <f:selectItem itemLabel="Davangere" itemValue="davangere"/>
+                                                    <f:selectItem itemLabel="Belgaum" itemValue="belgaum"/>
+                                                    <f:selectItem itemLabel="Bijapur" itemValue="bijapur"/>
+                                                    <f:selectItem itemLabel="Gulbarga" itemValue="gulbarga"/>
+                                                </p:selectOneMenu>
+                                            </h:panelGrid>
+                                            <a href="moharto_available_seats_new.xhtml"><button type="button" class="btn" style="width: 50px;
+                                                                                                height: 29px;margin-left: 50px;
+                                                                                                margin-top: 10px;">GO</button></a>
+                                            <h:outputText id="sa" value="#{myBean.password}"/>
+                                        </h:form>
+                                    </p:tab>
+                                    <p:tab id="ugtab" title="After 12th" titleStyleClass="tab2">
+                                        <h:form>
+                                            <h:panelGrid columns="1" style="text-align: left;" >
+                                                <p:selectOneMenu id="selcourse" value="#{myBean.username}" style="width:150px;" effect="fold" filter="true" filterMatchMode="startsWith">
+                                                    <f:selectItem itemLabel="Select Course" itemValue=""/>
+                                                    <f:selectItem itemLabel="B.E" itemValue="M.COM"/>
+                                                    <f:selectItem itemLabel="B.Tech" itemValue="M.TECH"/>
+                                                    <f:selectItem itemLabel="B.B.M" itemValue="M.COM"/>
+                                                    <f:selectItem itemLabel="B.B.A" itemValue="M.TECH"/>
+                                                    <f:selectItem itemLabel="B.Com" itemValue="MBA"/>
+                                                    <f:selectItem itemLabel="B.C.A" itemValue="M.COM"/>
+                                                    <f:selectItem itemLabel="B.C.S" itemValue="M.TECH"/>
+                                                    <f:selectItem itemLabel="B.D.S" itemValue="MBA"/>
+                                                    <f:selectItem itemLabel="B.Ed" itemValue="M.COM"/>
+                                                    <f:selectItem itemLabel="B.F.Tech" itemValue="M.TECH"/>
+                                                    <f:selectItem itemLabel="B.H.M" itemValue="MBA"/>
+                                                    <f:selectItem itemLabel="B.L" itemValue="M.COM"/>
+                                                    <f:selectItem itemLabel="B.Pharma" itemValue="M.TECH"/>
+                                                    <f:selectItem itemLabel="B.Sc.Ed" itemValue="M.COM"/>
+                                                    <f:selectItem itemLabel="B.Sc" itemValue="M.TECH"/>
+                                                    <f:selectItem itemLabel="B.V.Sc" itemValue="MBA"/>
+                                                    <f:selectItem itemLabel="B.A. B.Ed" itemValue="M.COM"/>
+                                                    <f:selectItem itemLabel="B.A.LLB" itemValue="M.TECH"/>
+                                                    <f:selectItem itemLabel="B.C.J" itemValue="MBA"/>
+                                                    <f:selectItem itemLabel="B.F.I.A" itemValue="M.COM"/>
+                                                    <f:selectItem itemLabel="B.H.M.S" itemValue="M.TECH"/>
+                                                    <f:selectItem itemLabel="B.V.Sc" itemValue="MBA"/>
+                                                    <f:selectItem itemLabel="B.D.S" itemValue="MBA"/>
+                                                    <f:selectItem itemLabel="B.P.ED" itemValue="M.COM"/>
+                                                    <f:selectItem itemLabel="B.Lit" itemValue="M.TECH"/>
+                                                    <f:selectItem itemLabel="B.Des" itemValue="MBA"/>
+                                                </p:selectOneMenu>
+                                                <p:selectOneMenu id="selcity" value="#{myBean.username}" style="width:150px;" effect="fold" filter="true" filterMatchMode="startsWith" >
+                                                    <f:selectItem itemLabel="Select City" itemValue=""/>
+                                                    <f:selectItem itemLabel="Bangalore" itemValue="Bangalore"/>
+                                                    <f:selectItem itemLabel="chennai" itemValue="chennai"/>
+                                                    <f:selectItem itemLabel="Kochi" itemValue="Kochi"/>
+                                                    <f:selectItem itemLabel="Hubli-Dharwad" itemValue="hubli-dwd"/>
+                                                    <f:selectItem itemLabel="Mysore" itemValue="mysore"/>
+                                                    <f:selectItem itemLabel="Mangalore" itemValue="mangalore"/>
+                                                    <f:selectItem itemLabel="Hyderabad" itemValue="hyderabad"/>
+                                                    <f:selectItem itemLabel="Mumbai" itemValue="mumbai"/>
+                                                    <f:selectItem itemLabel="Ahmedabad" itemValue="ahmedabad"/>
+                                                    <f:selectItem itemLabel="Pune" itemValue="pune"/>
+                                                    <f:selectItem itemLabel="Davangere" itemValue="davangere"/>
+                                                    <f:selectItem itemLabel="Belgaum" itemValue="belgaum"/>
+                                                    <f:selectItem itemLabel="Bijapur" itemValue="bijapur"/>
+                                                    <f:selectItem itemLabel="Gulbarga" itemValue="gulbarga"/>
+                                                </p:selectOneMenu>
+                                            </h:panelGrid>
+                                            <a href="moharto_available_seats_new.xhtml"><button type="button" class="btn" style="width: 50px;
+                                                                                                height: 29px;margin-left: 50px;
+                                                                                                margin-top: 10px;">GO</button></a>
+                                            <h:outputText id="sa" value=" #{myBean.password}"/>
+                                        </h:form>
+                                    </p:tab>
+                                    <p:tab id="aftr10tab" title="PG" titleStyle="tab3">
+                                        <h:form>
+                                            <h:panelGrid columns="1" style="text-align: left;">
+
+                                                <p:selectOneMenu id="selcourse" value="#{myBean.username}" style="width:150px;" effect="fold" filter="true" filterMatchMode="startsWith" >
+                                                    <f:selectItem itemLabel="Select Course" itemValue=""/>
+                                                    <f:selectItem itemLabel="M.B.A" itemValue="M.COM"/>
+                                                    <f:selectItem itemLabel="M.A" itemValue="M.TECH"/>
+                                                    <f:selectItem itemLabel="M.Com" itemValue="MBA"/>
+                                                    <f:selectItem itemLabel="M.C.A" itemValue="M.COM"/>
+                                                    <f:selectItem itemLabel="M.Ed" itemValue="M.TECH"/>
+                                                    <f:selectItem itemLabel="M.E" itemValue="MBA"/>
+                                                    <f:selectItem itemLabel="M.Sc" itemValue="M.COM"/>
+                                                    <f:selectItem itemLabel="M.Tech" itemValue="M.TECH"/>
+                                                    <f:selectItem itemLabel="LL.M" itemValue="MBA"/>
+                                                    <f:selectItem itemLabel="M.L" itemValue="M.COM"/>
+                                                    <f:selectItem itemLabel="M.Pharma" itemValue="M.TECH"/>
+                                                    <f:selectItem itemLabel="M.Phil" itemValue="MBA"/>
+                                                    <f:selectItem itemLabel="M.D.S" itemValue="MBA"/>
+                                                    <f:selectItem itemLabel="M.A.M" itemValue="M.COM"/>
+                                                    <f:selectItem itemLabel="M.H.M" itemValue="M.TECH"/>
+                                                    <f:selectItem itemLabel="M.H.H.M" itemValue="MBA"/>
+
+                                                </p:selectOneMenu>
+                                                <p:selectOneMenu id="selcity" value="#{myBean.username}" style="width:150px;" effect="fold" filter="true" filterMatchMode="startsWith" >
+                                                    <f:selectItem itemLabel="Select City" itemValue=""/>
+                                                    <f:selectItem itemLabel="Bangalore" itemValue="Bangalore"/>
+                                                    <f:selectItem itemLabel="chennai" itemValue="chennai"/>
+                                                    <f:selectItem itemLabel="Kochi" itemValue="Kochi"/>
+                                                    <f:selectItem itemLabel="Hubli-Dharwad" itemValue="hubli-dwd"/>
+                                                    <f:selectItem itemLabel="Mysore" itemValue="mysore"/>
+                                                    <f:selectItem itemLabel="Mangalore" itemValue="mangalore"/>
+                                                    <f:selectItem itemLabel="Hyderabad" itemValue="hyderabad"/>
+                                                    <f:selectItem itemLabel="Mumbai" itemValue="mumbai"/>
+                                                    <f:selectItem itemLabel="Ahmedabad" itemValue="ahmedabad"/>
+                                                    <f:selectItem itemLabel="Pune" itemValue="pune"/>
+                                                    <f:selectItem itemLabel="Davangere" itemValue="davangere"/>
+                                                    <f:selectItem itemLabel="Belgaum" itemValue="belgaum"/>
+                                                    <f:selectItem itemLabel="Bijapur" itemValue="bijapur"/>
+                                                    <f:selectItem itemLabel="Gulbarga" itemValue="gulbarga"/>
+                                                </p:selectOneMenu>
+                                            </h:panelGrid>
+                                            <a href="moharto_available_seats_new.xhtml"><button type="button" class="btn" style="width: 50px;
+                                                                                                height: 29px;margin-left: 50px;
+                                                                                                margin-top: 10px;">GO</button></a>
+                                            <h:outputText id="sa" value=" #{myBean.password}"/>
+                                        </h:form>
+                                    </p:tab>
+                                </p:tabView>
+                            </h:panelGrid>
+                        </div>
+                        <h:graphicImage value="../resources/images/pages/ad4.png" height="303" width="230" style="margin-top: 10px;"/>
+                        <h:graphicImage value="../resources/images/pages/mba.png"  width="230" height="140" style="margin-top: 10px;"/>
+                    </div>
+                </div>
+                <div style="clear: both;"/>
+                <br/>
+            </f:view>
+        </ui:define>
+    </ui:composition>
+</html>

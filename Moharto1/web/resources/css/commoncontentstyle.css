@@ -1,0 +1,72 @@
+.para{
+    text-align: left;
+    font-size: 13px;
+    margin-left: 13px;
+    padding-right: 20px;
+} 
+
+.pagetitle{
+    font-weight: 700;float: left;font-size: 16px;color: #49a4c8;margin-top: 7px;
+    width: 100%;margin-left: 10px;margin-bottom: 5px;
+}
+
+.paratitle{
+    font-size: 15px;color: #49a4c8;float: left; margin-top: 10px;margin-left: 10px;width: 100%;
+}
+.iwanttodo{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 230px;
+    height: 202px;
+}
+.blocktitle{
+
+    font-weight: 500;font-size: 16px;color: #49a4c8;margin-top: 7px;
+    width: 100%;margin-bottom: 5px;
+}
+.ui-datatable-scrollable-body {
+    height: 123px;
+}
+.tabview ui-tabs ui-tabs-top {
+    padding: 0px;
+}
+.tab1 {
+    width: 80px;
+}
+.tab2 {
+    width: 80px;
+}
+.tabview ul{
+    padding: 0px!important;
+
+}
+
+.tabview ui-tabs ui-tabs-nav li a{
+    padding: .5em 10px!important;
+}
+.ui-tabs .ui-tabs-nav {
+    border-color: white;
+}
+
+//
+
+.ui-datatable .ui-column-filter {
+    display: none;
+    width: 100px;
+    margin: auto;
+}
+.ui-datatable-scrollable-body::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 8px;
+    background-color: transparent;
+}
+.tabview ul{
+    padding: 0px!important;
+
+}
+
+.tabview ui-tabs ui-tabs-nav li a{
+    padding: .5em 10px!important;
+}
+
+//

@@ -1,0 +1,130 @@
+.body{
+    background-color: darkgray;
+    margin: 0 auto;
+}
+.maincontainer{
+    width: 980px;
+    height: auto;
+/*    min-height: 900px;*/
+    background-color: #ffffff;
+    margin: -20px auto;margin-top: 30px;
+}
+.middleportion{
+    width: 49%;
+    height: auto;
+        border: 1px solid #ddd;
+/*    margin: 0 14px 0 14px;*/
+    float:left;
+    margin-bottom: 10px;
+
+}
+.leftportion{
+    width: 24%;
+    height: 800px;
+    /*// border: 1px solid #ddd;*/
+    margin: 0 2px 0 0;
+
+    float: left;
+}
+.rightportion{
+    width: 24%;
+    height: 500px;
+    /*// border: 1px solid #ddd;*/
+    margin: 0 0 0 3px;
+
+    float: left;
+}
+#tab1a{
+    font-size: x-large;
+    font-weight: bold;
+    color: #0d75a0;
+    float: left;
+}
+.aaa{
+    width: 49%;
+    height: auto;
+    /*//border: 1px solid #ddd;*/
+    /*//float: left;*/
+    margin:62px 0 0 -28px;
+float: right;
+text-align: left;
+
+}
+.bbb{
+    width: 49%;
+    height: auto;
+    /*//border: 1px solid #ddd;*/
+    float: right;
+/*    margin: -563px  -20px 0 0px;*/
+margin-right: 36px;
+margin-top: -14px;
+text-align: left;
+}
+.tab{
+    /*border: 1px solid #ddd;*/
+
+    float:left;
+
+    margin: 0px 1px 13px 742px;
+    background: white;
+
+    height: 181px;
+
+    width: 234px;  
+    font-size: 12px;
+}
+.img4{
+
+    border: 1px solid white;
+    float: left;
+
+    margin: -56px 33px -43px 92px;
+    background: white;
+
+    height: 28px;
+
+    width: 43px;  
+}
+.img5{
+
+    border: 1px solid white;
+    float: left;
+    margin: 47px 33px -43px 14px;
+    background: white;
+    height: 26px;
+    width: 137px;
+}
+.img6{
+
+    border: 1px solid white;
+    float: left;
+
+    margin: 6px 33px -43px 14px;
+    background: white;
+
+    height: 28px;
+
+    width: 125px;  
+}
+/*.img11{
+   
+    width: 230px;
+    height: 418px;
+    margin: 0 0 0 0;
+}*/
+.testimonials{
+    margin: 2px 0 0 -735px;
+    border: 1px solid #ddd;
+    text-align:left;
+    float: left;
+}
+.regis{
+    margin: 227px 0 0 -736px;
+
+    /*// border: 1px solid #ddd;*/
+    float: left;
+}
+.ccc{
+    width: 48%;
+    margin-top: -262px;
+}

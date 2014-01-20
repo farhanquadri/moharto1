@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <h:outputStylesheet library="css" name="moharto_our_associates.css"/>
+        <style type="text/css">
+        </style>
+    </h:head>
+
+    <ui:composition template="/template/commonTemplate.xhtml">
+
+        <ui:define name='pageContent'>
+            <div class="our_associates_maincontainer"> 
+
+                <div class="our_associates_leftcontainer">
+                    <h:outputText value="Our Associates" style="margin-left: 10px;margin-top: 10px;font-size: 15px;font-weight: bold;float: left;color: #49a4c8;"/><br/>
+                    <br/>
+                    <br/>
+                    
+                    <p:dataTable id="dt1" var="as" value="#{associateBean.associates}" >
+
+
+                        <p:column id="colorColumn" headerText="Name"  >            
+                            <h:outputText value="#{as.name}" style="font-size: 12px;" />
+                        </p:column>
+
+                        <p:column id="colorColumn" headerText="Email"  >            
+                            <h:outputText value="#{as.email}" style="font-size: 12px;" />
+                        </p:column>
+                        <p:column id="colorColumn" headerText="Phone"  >            
+                            <h:outputText value="#{as.phone}" style="font-size: 12px;" />
+                        </p:column>
+                        <p:column id="colorColumn" headerText="Location" sortBy="#{as.location}" >            
+                            <h:outputText value="#{as.location}" style="font-size: 12px;" />
+                        </p:column>
+                    </p:dataTable>
+                </div>
+
+                <div class="our_associates_rightcontainer">
+                    <h:outputText value="Reach us to become our Associate" style="margin-left: 10px;margin-top: 10px;font-size: 15px;font-weight: bold;float: left;"/><br/>
+                    <br/>
+                    <br/>
+                    <div  class="reachus" style="margin-left: 26px;">
+
+                        <p:inputText id="fname" value="#{myBean.username}" style="width: 206px;margin-top: 0px;
+                                     height: 17px;margin-left: 7px;"/><br/>
+                        <p:watermark for="fname" value="First Name *" />
+
+                        <p:inputText id="lname" value="#{myBean.username}" style="width: 206px;margin-top: 7px;
+                                     height: 17px;margin-left: 7px;"/><br/>
+                        <p:watermark for="lname" value="Email *" /> 
+
+                        <p:inputText id="email" value="#{myBean.username}" style="width: 206px;margin-top: 7px;
+                                     height: 17px;margin-left: 7px;"/><br/>
+                        <p:watermark for="email" value="Mobile Number *" /> 
+
+                        <p:inputText id="pw" value="#{myBean.username}" style="width: 206px;margin-top: 7px;
+                                     height: 17px;margin-left: 7px;"/><br/>
+                        <p:watermark for="pw" value="Location *" />
+
+                        <p:inputText id="cpw" value="#{myBean.username}" style="width: 206px;margin-top: 7px;
+                                     height: 17px;margin-left: 7px;"/><br/>
+                        <p:watermark for="cpw" value="Current Occupation *" /> 
+
+                        <p:inputText id="mn" value="#{myBean.username}" style="width: 206px;margin-top: 7px;
+                                     height: 17px;margin-left: 7px;"/>
+                        <p:watermark for="mn" value="Educational Qualification *" /> 
+
+                        <div>
+                            <a href="moharto_available_seats_new.xhtml"><button type="button" class="btn" style="width: 65px;
+                                                                                height: 29px;margin-right: 35px;
+                                                                                margin-top: 10px;float: right;">Register</button></a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div style="clear: both"/>
+            <br/>
+            <br/>
+                            
+        </ui:define>
+    </ui:composition>
+
+</html>

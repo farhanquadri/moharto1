@@ -1,0 +1,31 @@
+body{}
+
+.Main{ margin:0px auto;  height:530px; width:908px; margin-top: 13px;text-align: left;  }
+
+.m1{ height: 520px; width: 225px; float: left; }
+
+.m11{height:290px; width:215px; margin-left: -18px; margin-right: -16px;}
+
+.m12{height: 143px; width: 200px;    margin-left:-15px; margin-right: -16px;}
+
+.m13{ height: 20px; width: 200px;  padding-left: 130px; font-size: 9pt; color: red}
+
+.m2{ height: 520px; width: 225px; float: left}
+
+.m21{height:440px; width:200px}
+
+.m22{height: 20px; width: 200px;  padding-left: 130px;}
+
+.m3{height: 520px; width: 225px;float: left}
+
+.m31{height:440px; width:200px}
+
+.m32{height: 20px; width: 200px;  padding-left: 130px;}
+
+.m4{height: 520px; width: 225px;float: left}
+
+.m41{height:427px; width:200px}
+
+.m42{height: 20px; width: 200px;  padding-left: 130px;}
+
+

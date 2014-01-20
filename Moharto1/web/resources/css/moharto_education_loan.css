@@ -1,0 +1,22 @@
+.educationloan_maincontainer{
+    width: 980px;
+
+    margin: 0 auto;
+
+
+}
+.educationloan_leftcontainer{
+
+    width: 69%;
+
+    float: left;
+
+
+}
+
+.educationloan_rightcontainer{
+
+    width: 29%;
+    float: left;
+
+}

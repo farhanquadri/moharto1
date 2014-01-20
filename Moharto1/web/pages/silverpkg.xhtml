@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+            <h:outputStylesheet library="css" name="css_silver.css"/>
+    </h:head>
+      <ui:composition template="/template/commonTemplate.xhtml">
+       <ui:define name='pageContent'>
+            <h:form id="form">
+                <div class="max">
+                 <div class="one">
+                        <h:outputText value="Subscription Packages for colleges" style="font-size: 18px;color:#00aeef"/>
+                        <br/>              <br/>
+                        <h:panelGrid columns="3" cellpadding="4px" style="font-size: 14px;" cellspacing="5px;">
+                            <h:outputText value="Duration"/>
+                            <h:outputText value=":"/>
+                            <h:outputText value="1 year"/>
+
+                            <h:outputText value="Benefits"/>
+                            <h:outputText value=":"/>
+                            <h:outputText value="Top Listing in Searches,Wish for navigation,Promotion of college
+                                          Ad in Course and Location based searches and navigation" style="float: left;
+                                          margin-top: 11px;margin-right: 19px;"/>
+
+                            <h:outputText value="Total No of Ads"/>
+                            <h:outputText value=":"/>
+                            <h:outputText value="3"/>
+
+                            <h:outputText value="Ad type" style="float: left;
+margin-top: -62px;"/>
+                            <h:outputText value=":" style="float: left;
+margin-top: -62px;"/>
+                    
+                            <h:panelGrid columns="2" style="margin-left: -5px;
+margin-top: 89px;">
+                               
+                                <h:graphicImage value="../resources/images/pages/Hurry Up.png" style="width: 213px;
+                                                height: 130px;
+                                                margin-top: -86px;"/>
+
+                                <h:graphicImage value="../resources/images/pages/bbm1.jpg" style="float: left;
+                                                width: 230px;
+                                                height: 78px;
+                                                margin-top: -108px;"/>
+                            </h:panelGrid>
+
+
+
+
+
+                            <h:outputText value="Promotion"/>
+                            <h:outputText value=":"/>
+                            <h:panelGrid>
+                                <ol style="float: left;
+                                    margin-left: -27px;">
+                                    <li>Home Page Ad - Rotation wise</li>
+                                    <li>Moharto Recommended Colleges - Circular Listing</li>
+                                    <li>Ads Based on Search or Navigation</li>
+                                </ol>
+                            </h:panelGrid>
+
+                            <h:outputText value="Course Leads Priority"/>
+                            <h:outputText value=":"/>
+                            <h:outputText value="That is,info about students will be sent to you after 6 days when they register with moharto "/>
+
+                            <h:outputText value="Package Price"/>
+                            <h:outputText value=":"/>
+                            <h:panelGrid columns="2"> 
+
+                                <p:commandLink   value="Click Here" style=" text-decoration: none;"   onclick="PF('dlg1').show();"/>To request the quote
+
+                            </h:panelGrid>
+                        </h:panelGrid>
+
+                        <p:dialog id="basicDialog" header="Kindly provide basic information about yourself" widgetVar="dlg1">
+                            <h:panelGrid columns="1">
+                                <h:inputText id="name"/>
+                                <p:watermark value="Name" for="name"/>
+                                <h:inputText id="mobile"/>
+                                <p:watermark value="Mobile" for="mobile"/>
+                                             <h:inputText id="colleges" />
+                                             <p:watermark value="College Name" for="colleges"/>
+                                             <h:inputText id="email"/>
+                                             <p:watermark value="Email id" for="email"/>
+                                             <p:commandButton value="Submit"/>
+                                             </h:panelGrid>
+                                             </p:dialog>
+
+
+                                             </div>
+                     <div class="two">
+                                                 <h:outputText value="Links" style="font-size: 15px;
+margin-left: 54px;
+color: #00aeef;"/>
+                                                 <center>
+                                                 
+                                        <h:panelGrid columns="1" style="font-size: 18px;
+margin-left: -73px;">
+                                            <a  href="subs.xhtml" style="font-size: 11px; 
+
+font-weight: bold;">Platinum Package</a><br/>
+                                            <a href="goldpkg.xhtml" style="font-size: 11px;
+margin-left: 8px;
+font-weight: bold;" > Gold Package</a><br/>
+                                            <a href="silverpkg.xhtml" style="font-size: 11px;
+margin-left: 8px;
+font-weight: bold;">Silver Package</a>
+                                        </h:panelGrid>
+                                                 
+                                    </center>
+                                    </div>
+                    </div>
+            </h:form>
+    </ui:define>
+    </ui:composition>
+</html>
+

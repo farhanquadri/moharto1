@@ -1,0 +1,27 @@
+.main
+{
+    width: 980px;
+    height: auto;
+/*    border: 1px solid #ddd;*/
+      margin-left: 185px;
+      text-align: left;
+}
+.a1
+{
+    float: left;
+      width: 730px;
+        height: auto;
+/*      border: 1px solid black;*/
+}
+.two
+{
+        float: left;
+ 
+    width: 240px;
+        height: auto;
+/*              border: 1px solid red;*/
+}
+.ui-tabs .ui-tabs-nav li a, .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a {
+
+margin-left: 6px;
+}

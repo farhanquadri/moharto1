@@ -1,0 +1,258 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+           <h:outputStylesheet library="css" name="commoncontentstyle.css"/>
+        <h:outputStylesheet library="css" name="colleges_moharto.css"/>
+        <h:outputStylesheet library="css" name="colleges_under_moharto.css"/>
+        <style>
+           
+        </style>
+    </h:head>
+    <ui:composition template="/template/threecolumnTemplate.xhtml">
+
+        <ui:define name='leftcolumn'>
+                   <p:dataTable id="citylistTable" var="cityobj" value="#{agentsBean.agents1}" widgetVar="citylisttable"   
+                                 emptyMessage="No Data found" style=" font-size: 12px;width: 100%; " scrollable="true" scrollHeight="80" >
+                        <f:facet name="header">  
+                            <p:outputPanel>  
+                                <h:outputText value="City" />  <br/>
+                                <p:inputText id="globalFilter" onkeyup="citylisttable.filter()" style="font-size: 12px;" />  
+                            </p:outputPanel>  
+
+                        </f:facet> 
+
+                        <p:column id="colorColumn" filterBy="#{cityobj.city}" > 
+                            <h:selectBooleanCheckbox id="sbc" label=""/>
+                            <h:outputText value="#{cityobj.city}" style="font-size: 12px;" />
+
+                        </p:column>
+
+
+                    </p:dataTable><br/>
+
+                    <p:dataTable id="dataTable1" var="car" value="#{agentsBean.agents1}" widgetVar="carsTable2"   
+                                 emptyMessage="No Data found" style=" font-size: 12px;
+                                 width: 100%; " scrollable="true" scrollHeight="100" >
+                        <f:facet name="header">  
+                            <p:outputPanel>  
+                                <h:outputText value="Univesity" />  <br/>
+                                <p:inputText id="globalFilter" onkeyup="carsTable2.filter()" style="font-size: 12px;" />  
+                            </p:outputPanel>  
+
+                        </f:facet> 
+
+                        <p:column id="colorColumn" filterBy="#{car.name}"  > 
+                            <h:selectBooleanCheckbox id="sbc1" label=""/>
+                            <h:outputText value="#{car.name}" style="font-size: 12px;" />
+
+                        </p:column>
+                    </p:dataTable><br/>
+                    <p:inputText id="txt1" style="width: 220px;">
+                        <p:watermark for="txt1" value="College Lookup"/>
+                    </p:inputText>
+
+                    <h:graphicImage value="../resources/images/pages/capture.png" height="110" width="228" style="border: 1px solid;margin-top: 5px;"/>
+                    <h:graphicImage value="../resources/images/pages/ielts.png"  width="230" height="264"/>
+
+        </ui:define>
+
+        <ui:define name='main'>
+               <div style="padding-left: 15px;padding-right: 15px;">
+                        <p:panel style="font-size: 12px;border: none;" header="COLLEGES UNDER MOHARTO" styleClass="cpanel" >
+                            <h:form id="fmid">
+                                <p:dataGrid var="clg" value="#{collegeBean.college}" paginator="true" paginatorPosition="bottom" columns="1" rows="5" styleClass="dg">
+                                    <h:panelGrid columns="2">
+                                        <h:graphicImage url="../resources/images/pages/#{clg.collegelogo}" height="100px"  width="100px" style="border: 1px solid #ddd;"/>
+                                        <h:panelGrid columns="1">
+                                            <h:outputText value="#{clg.collegename}, #{clg.collegecity}" style="color: rgb(139, 111, 20);font-size: 15px;font-weight: bold;" />
+                                            <p:rating  value="#{clg.rating}" readonly="true" />
+                                            <h:outputText value="#{clg.affiliated}" />
+
+                                            <h:panelGrid columns="3" style="">
+
+                                                <a href="microsite_home.xhtml" target="_blank" style="color: #990000;padding-right: 20px; text-decoration: none;">View More</a>
+                                                <a href="moharto_course_seat.xhtml" target="_blank" style="color: #990000;padding-right: 20px; text-decoration: none;">Check Seats Availability</a>
+
+                                            </h:panelGrid>
+                                        </h:panelGrid>
+
+                                    </h:panelGrid>
+                                </p:dataGrid>
+                            </h:form>
+                        </p:panel>
+               </div>
+        </ui:define>
+        <ui:define name='rightcolumn'>
+              <div class="iwanttodo">
+
+                <div class="blocktitle">
+                    <center>
+                        I Want To Do
+                    </center>
+                </div>
+
+                    <p:tabView id="tv" style="padding-left: 0px;padding-right: 0px;border: 0px;"  effect="slide" styleClass="tabview">
+                        <p:tab id="pgtab" title="After 10th" titleStyleClass="tab1" >
+                            <h:form>
+                                <h:panelGrid columns="1" style="text-align: left;">
+                                    <p:selectOneMenu id="selcourse" value="#{myBean.username}" style="width:150px;" effect="fold" filter="true" filterMatchMode="startsWith" >
+                                        <f:selectItem itemLabel="Select Course" itemValue=""/>
+                                        <f:selectItem itemLabel="PUC" itemValue="22"/>
+                                        <f:selectItem itemLabel="Diploma" itemValue="23"/>
+                                        <f:selectItem itemLabel="ITI" itemValue="24"/>
+                                        <f:selectItem itemLabel="Nursing" itemValue="24"/>
+                                    </p:selectOneMenu>
+                                    <p:selectOneMenu id="selcity" value="#{myBean.username}" style="width:150px;" effect="fold" filter="true" filterMatchMode="startsWith" >
+                                        <f:selectItem itemLabel="Select City" itemValue=""/>
+                                        <f:selectItem itemLabel="Bangalore" itemValue="Bangalore"/>
+                                        <f:selectItem itemLabel="chennai" itemValue="chennai"/>
+                                        <f:selectItem itemLabel="Kochi" itemValue="Kochi"/>
+                                        <f:selectItem itemLabel="Hubli-Dharwad" itemValue="hubli-dwd"/>
+                                        <f:selectItem itemLabel="Mysore" itemValue="mysore"/>
+                                        <f:selectItem itemLabel="Mangalore" itemValue="mangalore"/>
+                                        <f:selectItem itemLabel="Hyderabad" itemValue="hyderabad"/>
+                                        <f:selectItem itemLabel="Mumbai" itemValue="mumbai"/>
+                                        <f:selectItem itemLabel="Ahmedabad" itemValue="ahmedabad"/>
+                                        <f:selectItem itemLabel="Pune" itemValue="pune"/>
+                                        <f:selectItem itemLabel="Davangere" itemValue="davangere"/>
+                                        <f:selectItem itemLabel="Belgaum" itemValue="belgaum"/>
+                                        <f:selectItem itemLabel="Bijapur" itemValue="bijapur"/>
+                                        <f:selectItem itemLabel="Gulbarga" itemValue="gulbarga"/>
+                                    </p:selectOneMenu>
+                                </h:panelGrid>
+                                <a href="moharto_available_seats_new.xhtml"><button type="button" class="btn" style="width: 50px;
+                                                                                    height: 29px;margin-left: 50px;
+                                                                                    margin-top: 10px;">GO</button></a>
+                                <h:outputText id="sa" value="#{myBean.password}"/>
+                            </h:form>
+                        </p:tab>
+                        <p:tab id="ugtab" title="After 12th" titleStyleClass="tab2">
+                            <h:form>
+                                <h:panelGrid columns="1" style="text-align: left;" >
+                                    <p:selectOneMenu id="selcourse" value="#{myBean.username}" style="width:150px;" effect="fold" filter="true" filterMatchMode="startsWith">
+                                        <f:selectItem itemLabel="Select Course" itemValue=""/>
+                                        <f:selectItem itemLabel="B.E" itemValue="M.COM"/>
+                                        <f:selectItem itemLabel="B.Tech" itemValue="M.TECH"/>
+                                        <f:selectItem itemLabel="B.B.M" itemValue="M.COM"/>
+                                        <f:selectItem itemLabel="B.B.A" itemValue="M.TECH"/>
+                                        <f:selectItem itemLabel="B.Com" itemValue="MBA"/>
+                                        <f:selectItem itemLabel="B.C.A" itemValue="M.COM"/>
+                                        <f:selectItem itemLabel="B.C.S" itemValue="M.TECH"/>
+                                        <f:selectItem itemLabel="B.D.S" itemValue="MBA"/>
+                                        <f:selectItem itemLabel="B.Ed" itemValue="M.COM"/>
+                                        <f:selectItem itemLabel="B.F.Tech" itemValue="M.TECH"/>
+                                        <f:selectItem itemLabel="B.H.M" itemValue="MBA"/>
+                                        <f:selectItem itemLabel="B.L" itemValue="M.COM"/>
+                                        <f:selectItem itemLabel="B.Pharma" itemValue="M.TECH"/>
+                                        <f:selectItem itemLabel="B.Sc.Ed" itemValue="M.COM"/>
+                                        <f:selectItem itemLabel="B.Sc" itemValue="M.TECH"/>
+                                        <f:selectItem itemLabel="B.V.Sc" itemValue="MBA"/>
+                                        <f:selectItem itemLabel="B.A. B.Ed" itemValue="M.COM"/>
+                                        <f:selectItem itemLabel="B.A.LLB" itemValue="M.TECH"/>
+                                        <f:selectItem itemLabel="B.C.J" itemValue="MBA"/>
+                                        <f:selectItem itemLabel="B.F.I.A" itemValue="M.COM"/>
+                                        <f:selectItem itemLabel="B.H.M.S" itemValue="M.TECH"/>
+                                        <f:selectItem itemLabel="B.V.Sc" itemValue="MBA"/>
+                                        <f:selectItem itemLabel="B.D.S" itemValue="MBA"/>
+                                        <f:selectItem itemLabel="B.P.ED" itemValue="M.COM"/>
+                                        <f:selectItem itemLabel="B.Lit" itemValue="M.TECH"/>
+                                        <f:selectItem itemLabel="B.Des" itemValue="MBA"/>
+                                    </p:selectOneMenu>
+                                    <p:selectOneMenu id="selcity" value="#{myBean.username}" style="width:150px;" effect="fold" filter="true" filterMatchMode="startsWith" >
+                                        <f:selectItem itemLabel="Select City" itemValue=""/>
+                                        <f:selectItem itemLabel="Bangalore" itemValue="Bangalore"/>
+                                        <f:selectItem itemLabel="chennai" itemValue="chennai"/>
+                                        <f:selectItem itemLabel="Kochi" itemValue="Kochi"/>
+                                        <f:selectItem itemLabel="Hubli-Dharwad" itemValue="hubli-dwd"/>
+                                        <f:selectItem itemLabel="Mysore" itemValue="mysore"/>
+                                        <f:selectItem itemLabel="Mangalore" itemValue="mangalore"/>
+                                        <f:selectItem itemLabel="Hyderabad" itemValue="hyderabad"/>
+                                        <f:selectItem itemLabel="Mumbai" itemValue="mumbai"/>
+                                        <f:selectItem itemLabel="Ahmedabad" itemValue="ahmedabad"/>
+                                        <f:selectItem itemLabel="Pune" itemValue="pune"/>
+                                        <f:selectItem itemLabel="Davangere" itemValue="davangere"/>
+                                        <f:selectItem itemLabel="Belgaum" itemValue="belgaum"/>
+                                        <f:selectItem itemLabel="Bijapur" itemValue="bijapur"/>
+                                        <f:selectItem itemLabel="Gulbarga" itemValue="gulbarga"/>
+                                    </p:selectOneMenu>
+                                </h:panelGrid>
+                                <a href="moharto_available_seats_new.xhtml"><button type="button" class="btn" style="width: 50px;
+                                                                                    height: 29px;margin-left: 50px;
+                                                                                    margin-top: 10px;">GO</button></a>
+                                <h:outputText id="sa" value=" #{myBean.password}"/>
+                            </h:form>
+                        </p:tab>
+                        <p:tab id="aftr10tab" title="PG" titleStyle="tab3">
+                            <h:form>
+                                <h:panelGrid columns="1" style="text-align: left;">
+
+                                    <p:selectOneMenu id="selcourse" value="#{myBean.username}" style="width:150px;" effect="fold" filter="true" filterMatchMode="startsWith" >
+                                        <f:selectItem itemLabel="Select Course" itemValue=""/>
+                                        <f:selectItem itemLabel="M.B.A" itemValue="M.COM"/>
+                                        <f:selectItem itemLabel="M.A" itemValue="M.TECH"/>
+                                        <f:selectItem itemLabel="M.Com" itemValue="MBA"/>
+                                        <f:selectItem itemLabel="M.C.A" itemValue="M.COM"/>
+                                        <f:selectItem itemLabel="M.Ed" itemValue="M.TECH"/>
+                                        <f:selectItem itemLabel="M.E" itemValue="MBA"/>
+                                        <f:selectItem itemLabel="M.Sc" itemValue="M.COM"/>
+                                        <f:selectItem itemLabel="M.Tech" itemValue="M.TECH"/>
+                                        <f:selectItem itemLabel="LL.M" itemValue="MBA"/>
+                                        <f:selectItem itemLabel="M.L" itemValue="M.COM"/>
+                                        <f:selectItem itemLabel="M.Pharma" itemValue="M.TECH"/>
+                                        <f:selectItem itemLabel="M.Phil" itemValue="MBA"/>
+                                        <f:selectItem itemLabel="M.D.S" itemValue="MBA"/>
+                                        <f:selectItem itemLabel="M.A.M" itemValue="M.COM"/>
+                                        <f:selectItem itemLabel="M.H.M" itemValue="M.TECH"/>
+                                        <f:selectItem itemLabel="M.H.H.M" itemValue="MBA"/>
+
+                                    </p:selectOneMenu>
+                                    <p:selectOneMenu id="selcity" value="#{myBean.username}" style="width:150px;" effect="fold" filter="true" filterMatchMode="startsWith" >
+                                        <f:selectItem itemLabel="Select City" itemValue=""/>
+                                        <f:selectItem itemLabel="Bangalore" itemValue="Bangalore"/>
+                                        <f:selectItem itemLabel="chennai" itemValue="chennai"/>
+                                        <f:selectItem itemLabel="Kochi" itemValue="Kochi"/>
+                                        <f:selectItem itemLabel="Hubli-Dharwad" itemValue="hubli-dwd"/>
+                                        <f:selectItem itemLabel="Mysore" itemValue="mysore"/>
+                                        <f:selectItem itemLabel="Mangalore" itemValue="mangalore"/>
+                                        <f:selectItem itemLabel="Hyderabad" itemValue="hyderabad"/>
+                                        <f:selectItem itemLabel="Mumbai" itemValue="mumbai"/>
+                                        <f:selectItem itemLabel="Ahmedabad" itemValue="ahmedabad"/>
+                                        <f:selectItem itemLabel="Pune" itemValue="pune"/>
+                                        <f:selectItem itemLabel="Davangere" itemValue="davangere"/>
+                                        <f:selectItem itemLabel="Belgaum" itemValue="belgaum"/>
+                                        <f:selectItem itemLabel="Bijapur" itemValue="bijapur"/>
+                                        <f:selectItem itemLabel="Gulbarga" itemValue="gulbarga"/>
+                                    </p:selectOneMenu>
+                                </h:panelGrid>
+                                <a href="moharto_available_seats_new.xhtml">
+                                    <button type="button" class="btn" style="width: 50px;
+                                                                                    height: 29px;margin-left: 50px;
+                                                                                    margin-top: 10px;">GO</button>
+                                </a>
+                                <h:outputText id="sa" value=" #{myBean.password}"/>
+                            </h:form>
+                        </p:tab>
+                    </p:tabView>
+        
+            </div>
+
+                    <p:dataTable var="clg" value="#{collegesList.college}" scrollable="true" scrollHeight="200" styleClass="dtclg">
+                        <p:column headerText="FEATURED COLLEGES">
+                            <h:outputLink id="fade" value="#" style="font-size: 13px;text-decoration: none;">  
+                                <h:outputText value="#{clg.collegename}" />  
+                            </h:outputLink>  
+                            <p:tooltip for="fade" value="#{clg.collegename}" showEffect="fade" hideEffect="fade" />  
+                        </p:column>
+                    </p:dataTable>
+
+                    <h:graphicImage value="../resources/images/pages/ad4.png" height="290" width="230"/>
+               
+        </ui:define>
+ 
+    </ui:composition>
+</html>

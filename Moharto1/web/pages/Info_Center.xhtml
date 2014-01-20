@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
+
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        
+        <meta name="viewport" content="width=device-width"/>
+        <h:outputStylesheet library="css" name="InfoCenterCSS.css"/>
+    </h:head>
+    <ui:composition template="/template/commonTemplate.xhtml">
+        <ui:define name='pageContent'>
+            <body>
+                <h:form>
+                    <div class="Main">
+                        <h2 style="text-align: center;color: #1784A7;">Info Center</h2>
+                        <div class="m1" style=""> 
+                            <!--FORUM-->
+
+                            <p:panel header="Forum" style="height: 500px; border-bottom-left-radius: 20px; font-size: 12pt;">
+                                <div id="panel" class="m11"> <h:panelGrid columns="1" style="font-size: 9pt;">
+
+
+                                        <h:panelGrid columns="2">
+                                            <h:graphicImage value="../resources/images/pages/images1.jpg" style="
+                                                            width: 25px; float: left;
+                                                            height: 25px;"/> 
+                                            <p:commandLink value="Discuss New Ideas and Suggestions " action="QuesAns"></p:commandLink>
+                                        </h:panelGrid>
+
+                                        <h:panelGrid columns="2">
+                                            <h:graphicImage value="../resources/images/pages/images1.jpg" style="
+                                                            width: 25px; float: left;
+                                                            height: 25px;"/> 
+                                            <p:commandLink value=" Can i join form functions and college festival functions? " ></p:commandLink>
+                                        </h:panelGrid>
+
+                                        <h:panelGrid columns="2">
+                                            <h:graphicImage value="../resources/images/pages/images1.jpg" style="
+                                                            width: 25px; float: left;
+                                                            height: 25px;"/> 
+                                            <p:commandLink value=" College and University Articles Archive! " ></p:commandLink>
+                                        </h:panelGrid>
+
+                                        <h:panelGrid columns="2">
+                                            <h:graphicImage value="../resources/images/pages/images1.jpg" style="
+                                                            width: 25px; float: left;
+                                                            height: 25px;"/> 
+                                            <p:commandLink value="Suggestion Box and Help Desk! *" ></p:commandLink>
+                                        </h:panelGrid>
+
+
+
+                                        <h:panelGrid columns="2">
+                                            <h:graphicImage value="../resources/images/pages/images1.jpg" style="
+                                                            width: 25px; float: left;
+                                                            height: 25px;"/> 
+                                            <p:commandLink value="Is college AICTE certified? " ></p:commandLink>
+                                        </h:panelGrid>
+
+                                        <h:panelGrid columns="2">
+                                            <h:graphicImage value="../resources/images/pages/images1.jpg" style="
+                                                            width: 25px; float: left;
+                                                            height: 25px;"/> 
+                                            <p:commandLink value="Free and Open Discussion  " ></p:commandLink>
+                                        </h:panelGrid>
+
+                                    </h:panelGrid>
+                                </div>
+                                <div class="m12">
+                                    <p:outputLabel value="Ask Question" style="font-weight: bold"></p:outputLabel>
+                                    <h:panelGrid columns="1" >
+
+                                        <p:inputTextarea style="width: 198px;"></p:inputTextarea>
+                                        <p:commandButton value="Submit" style="margin-left: 50px;"/>
+                                    </h:panelGrid>
+                                </div>
+                                <div  class="m13" ><a href="moharto_ask_a_question_new.xhtml" style="color: #990000">View more</a></div>
+                            </p:panel></div>
+
+                        <!--BLOG-->
+                        <div class="m2">
+                            <p:panel header="Blog" style="height: 500px; border-bottom-left-radius: 20px; border-top-left-radius: 10px">  
+                                <div class="m21">
+                                    <h:panelGrid columns="1">
+
+                                        <p:commandLink value="Moharto Extensions to Abroad Colleges"/>
+                                        <br/>
+                                        <p:commandLink value="Inter-College Youth Festival Competition"/>
+                                        <br/>
+                                        <p:commandLink value="Charity Function by Moharto"/>
+                                        <br/>
+                                        <p:commandLink value="Sunshine, History, and Literature"/>
+                                        <br/>
+                                        <p:commandLink value="Guest Blog: REP-tastic students advance sustainability on campus"/>
+                                        <br/>
+                                        <p:commandLink value="Sport Events"/>
+                                        <br/>
+                                        <p:commandLink value="Life is a Fete"/>
+                                        <br/>
+                                        <p:commandLink value="Request an Imperial blog"/>
+                                        <br/>
+                                        <p:commandLink  value="Arts First!"/>
+                                    </h:panelGrid></div>
+                                <div  class="m22" ><a href="moharto_blog.xhtml" style="color: #990000">View more </a></div>
+                            </p:panel></div>
+
+                        <!--NEWS UPDATE-->
+                        <div class="m3">
+                            <p:panel  header="News Update" style="height:500px; border-bottom-left-radius: 20px; border-top-left-radius: 10px">           
+                                <div class="m31">
+                                    <h:panelGrid columns="1">
+                                        <p:commandLink value="Invites applications for Bachelor of Computer applications in Various colleges....."  style="color: red"/>
+                                        <br/>
+                                        <p:commandLink value="“Attending to the ‘Little Things’ Can Make the Biggest Difference”" style="color: red"/>
+                                        <br/>
+                                        <p:commandLink value="Admission Last date for apply for BCA students" style="color:red" />
+                                        <br/>
+                                        <p:commandLink value="“December College Planning Tips: Financial Aid” BCF Readers’ Forum”  ....." style="color: red"/>
+                                        <br/>
+                                        <p:commandLink value="Career opurunities...." style="color: red"/>
+                                        <br/>
+                                        <p:commandLink value="The Perfect Storm: Webinar sponsored by Moharto.net." style="color: red"/>
+                                        <br/>
+                                        <p:commandLink value="Interpreting Outcomes for Bewildered Applicants" style="color: red"/>
+                                        <br/>
+                                        <p:commandLink value="What's My Story? Workshop" style="color: red"/>
+                                    </h:panelGrid>
+                                </div>
+                                <div  class="m32" ><a href="moharto_topper_news.xhtml" style="color: #990000">View more</a></div>
+                            </p:panel></div>
+
+                        <!--FAQ-->   
+                        <div class="m4">
+                            <p:panel header="FAQ" style="height: 500px; border-bottom-left-radius: 20px; border-top-left-radius: 10px">                
+                                <div class="m41">
+
+                                    <p>  <h1 style="color: black; font-size: 16px; font-style: italic">Eligibility</h1>
+                                        <li><p:commandLink value="How do I register on Moharto.com?" style="font-size: 9pt;"/></li>
+                                        <li><p:commandLink value="Is it necessary to upload my picture in my profile?" style="font-size: 9pt;"/></li></p>
+
+                                    <p>
+                                        <h1 style="color: black; font-size: 16px; font-style: italic">Application Process</h1>
+                                        <li><p:commandLink value="I want to do a particular course. How do I find out which colleges are offering it?" style="font-size: 9pt;"/></li>
+                                        <li><p:commandLink value="I want to study abroad. How can moharto help me?" style="font-size: 9pt;"/></li>
+
+                                    </p>
+
+
+
+                                    <p >
+                                        <h1 style="color: black; font-size: 16px; font-style: italic">International Students</h1>
+                                        <li><p:commandLink value="How can I change my display name?" style="font-size: 9pt;"/></li>
+                                        <li><p:commandLink value="I have moved to another city. Can I edit it on my Moharto profile?" style="font-size: 9pt;"/></li>
+                                    </p>                   
+
+                                </div>
+                                <div  class="m42" ><a href="moharto_FAQ.xhtml" style="color: #990000">View more </a></div>
+                            </p:panel></div>
+
+                    </div>
+                </h:form>
+
+            </body>
+        </ui:define>
+    </ui:composition>
+</html>

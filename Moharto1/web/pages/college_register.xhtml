@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <!--<h:outputStylesheet library="css" name="testimonials.css"/>-->
+        <h:outputStylesheet library="css" name="log_1.css"/>
+
+    </h:head>
+    <ui:composition template="/template/commonTemplate.xhtml">
+
+        <ui:define name='pageContent'>
+            <div class="maincontainer">
+
+                <center>
+
+                    <div class="colg">
+
+                        <center> <p id="tab1a" style="font-size: 20px;">College Registration</p></center>
+                        <div class="colg1">
+    <!--                            <p:selectOneMenu id="country" value="#{myBean.username}" style="width: 212px;margin-top: 4px;margin-bottom: 4px;  box-shadow: 2px 2px 3px #666666"><br/><br/>
+                                <f:selectItem itemLabel="Select Country*" itemValue=""/>
+                                <f:selectItem itemLabel="Austrailia" itemValue="Bangalore"/>
+                                <f:selectItem itemLabel="SouthAfrica" itemValue="chennai"/>
+                                <f:selectItem itemLabel="Canada" itemValue="Kochi"/>
+                                <f:selectItem itemLabel="China" itemValue="Kochi"/>
+                                <f:selectItem itemLabel="USA" itemValue="Kochi"/>
+                                <f:selectItem itemLabel="UK" itemValue="Kochi"/>
+                                <f:selectItem itemLabel="India" itemValue="Kochi"/>
+                                <f:selectItem itemLabel="Rassia" itemValue="Kochi"/>
+                                <f:selectItem itemLabel="Malaysia" itemValue="Kochi"/>
+                            </p:selectOneMenu>
+    
+    
+                            <p:selectOneMenu id="state" value="#{myBean.username}" style="width: 212px;margin-top: 4px;margin-bottom: 4px;  box-shadow: 2px 2px 3px #666666"><br/><br/>
+                                <f:selectItem itemLabel="Select State*" itemValue=""/>
+                                <f:selectItem itemLabel="Melbourne" itemValue="Bangalore"/>
+                                <f:selectItem itemLabel="Johannesburg" itemValue="chennai"/>
+                                <f:selectItem itemLabel="Nova Scotia" itemValue="Kochi"/>
+                                <f:selectItem itemLabel="Guangdong" itemValue="Kochi"/>
+                                <f:selectItem itemLabel="New York" itemValue="Kochi"/>
+                                <f:selectItem itemLabel="London" itemValue="Kochi"/>
+                                <f:selectItem itemLabel="Bangalore" itemValue="Kochi"/>
+                                <f:selectItem itemLabel="Asino" itemValue="Kochi"/>
+                                <f:selectItem itemLabel="Malaysia" itemValue="Kochi"/>
+                            </p:selectOneMenu>
+    
+                            <p:selectOneMenu id="university" value="#{myBean.username}" style="width: 212px;margin-top: 4px;margin-bottom: 4px;  box-shadow: 2px 2px 3px #666666">
+                                <f:selectItem itemLabel="Select University*" itemValue=""/>
+                                <f:selectItem itemLabel="Melbourne" itemValue="Bangalore"/>
+                                <f:selectItem itemLabel="Johannesburg" itemValue="chennai"/>
+                                <f:selectItem itemLabel="Nova Scotia" itemValue="Kochi"/>
+                                <f:selectItem itemLabel="Guangdong" itemValue="Kochi"/>
+                                <f:selectItem itemLabel="New York" itemValue="Kochi"/>
+                                <f:selectItem itemLabel="London" itemValue="Kochi"/>
+                                <f:selectItem itemLabel="Bangalore" itemValue="Kochi"/>
+                                <f:selectItem itemLabel="Asino" itemValue="Kochi"/>
+                                <f:selectItem itemLabel="Malaysia" itemValue="Kochi"/>
+                            </p:selectOneMenu>
+    
+                            <p:selectOneMenu id="college" value="#{myBean.username}" style="width: 212px;margin-top: 4px;margin-bottom: 4px;  box-shadow: 2px 2px 3px #666666"><br/><br/>
+                                <f:selectItem itemLabel="Select College*" itemValue=""/>
+                                <f:selectItem itemLabel="Melbourne" itemValue="Bangalore"/>
+                                <f:selectItem itemLabel="Johannesburg" itemValue="chennai"/>
+                                <f:selectItem itemLabel="Nova Scotia" itemValue="Kochi"/>
+                                <f:selectItem itemLabel="Guangdong" itemValue="Kochi"/>
+                                <f:selectItem itemLabel="New York" itemValue="Kochi"/>
+                                <f:selectItem itemLabel="London" itemValue="Kochi"/>
+                                <f:selectItem itemLabel="Bangalore" itemValue="Kochi"/>
+                                <f:selectItem itemLabel="Asino" itemValue="Kochi"/>
+                                <f:selectItem itemLabel="Malaysia" itemValue="Kochi"/>
+                            </p:selectOneMenu>-->
+
+                            <p:inputText id="address" required="true"  style="box-shadow: 2px 2px 3px #666666;width: 207px;margin-top: 15px;" /><br/><br/>
+                            <p:watermark for="address" value="College Name*"/>
+
+                            <p:inputTextarea id="address1" required="true"  style="box-shadow: 2px 2px 3px #666666;width: 207px;" /><br/><br/>
+                            <p:watermark for="address1" value="Address *"/>
+
+
+                            <p:inputText id="phone1" required="true"  style="box-shadow: 2px 2px 3px #666666;width: 207px;"/><br/><br/>
+                            <p:watermark for="phone1" value="Enter City*"/>
+
+
+                            <p:inputText id="phone2" required="true"  style="box-shadow: 2px 2px 3px #666666;width: 207px;"/><br/><br/>
+                            <p:watermark for="phone2" value="Contact Person *"/>
+
+                            <p:inputText id="phone3" required="true"  style="box-shadow: 2px 2px 3px #666666;width: 207px;"/><br/><br/>
+                            <p:watermark for="phone3" value="Mobile No. *"/>
+
+                            <p:inputText id="phone4" required="true"  style="box-shadow: 2px 2px 3px #666666;width: 207px;"/><br/><br/>
+                            <p:watermark for="phone4" value="Phone No. *"/>
+
+                            <p:inputText id="email1" required="true" size="207"  style="box-shadow: 2px 2px 3px #666666;width: 207px;"/><br/>
+                            <p:watermark for="email1" value="Email*"/>
+
+                            <h:selectBooleanCheckbox value="#{myBean.username}" style="margin-left: -268px;
+                                                     margin-top: 30px;">
+                            </h:selectBooleanCheckbox> 
+
+                            <p style="margin-left: 27px;
+                               padding: 0px;
+                               margin-top: -18px;">I agree to the <span style="color: #4251A2;font-style: italic;">Terms of service</span> and <span style="color: #4251A2;font-style: italic;">Privacy Policy</span></p>
+
+                            <p:commandButton id="btn3" value="Register"  actionListener="#{personBean.savePerson}" style=" box-shadow: 2px 2px 3px #666666;"  /> 
+                            <p:commandButton id="btn4" value="Clear"  actionListener="#{personBean.savePerson}" style=" box-shadow: 2px 2px 3px #666666; "  /> 
+
+                        </div>
+                    </div>   
+                    <div class="clear"/>
+                    <center><p style="font-size: 15px;"> If you  already Registered<a href="college_login.xhtml" style="text-decoration: 
+                                                                                      none;color: #0d75a0;"> Click Here </a></p></center>
+
+                </center>
+            </div>
+
+
+        </ui:define>
+    </ui:composition>
+</html>

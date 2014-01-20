@@ -1,0 +1,32 @@
+.subsmain{
+   margin: 0 auto;
+    width: 980px;
+    height:auto;
+    background-color: white;
+    margin-top: 19px;
+    margin-bottom: 14px;
+  
+/*    border: 1px solid #ddd;*/
+    
+}
+
+.one{
+    width: 736px;
+    height: 480px;
+/*        border: 1px solid red;*/
+        float: left;
+    margin-left: 6px;
+}
+.two
+{
+     width: 233px;
+    height: 470px;
+        border-left: 1px solid black;
+        float: right;
+        margin-top: 3px;
+    
+}
+.clear
+{
+    clear: both;
+}

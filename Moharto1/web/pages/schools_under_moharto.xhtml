@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <h:outputStylesheet library="css" name="colleges_under_moharto.css"/>
+        <style>
+            .ui-datatable .ui-column-filter {
+                display: none;
+                width: 100px;
+                margin: auto;
+            }
+            .ui-datatable-scrollable-body::-webkit-scrollbar {
+                -webkit-appearance: none;
+                width: 8px;
+                background-color: transparent;
+            }
+        </style>
+    </h:head>
+    <ui:composition template="/template/commonTemplate.xhtml">
+
+        <ui:define name='pageContent'>
+            <f:view>
+                <div class="maincontainer">
+                    <div class="container1">
+                                <p:dataTable id="dataTable" var="car" value="#{agentsBean.agents1}" widgetVar="carsTable1"   
+                                             emptyMessage="No Data found" style=" font-size: 12px;width: 100%; " scrollable="true" scrollHeight="80" >
+                                    <f:facet name="header">  
+                                        <p:outputPanel>  
+                                            <h:outputText value="City" />  <br/>
+                                            <p:inputText id="globalFilter" onkeyup="carsTable1.filter()" style="font-size: 12px;" />  
+                                        </p:outputPanel>  
+
+                                    </f:facet> 
+
+                                    <p:column id="colorColumn" filterBy="#{car.city}" > 
+                                        <h:selectBooleanCheckbox id="sbc" label=""/>
+                                        <h:outputText value="#{car.city}" style="font-size: 12px;" />
+
+                                    </p:column>
+
+
+                                </p:dataTable><br/>
+                                <p:dataTable id="dataTable1" var="car" value="#{agentsBean.agents1}" widgetVar="carsTable2"   
+                                             emptyMessage="No Data found" style=" font-size: 12px;
+                                             width: 100%; " scrollable="true" scrollHeight="100" >
+                                    <f:facet name="header">  
+                                        <p:outputPanel>  
+                                            <h:outputText value="Board" />  <br/>
+                                            <p:inputText id="globalFilter" onkeyup="carsTable2.filter()" style="font-size: 12px;" />  
+                                        </p:outputPanel>  
+
+                                    </f:facet> 
+
+                                    <p:column id="colorColumn" filterBy="#{car.board}"  > 
+                                        <h:selectBooleanCheckbox id="sbc1" label=""/>
+                                        <h:outputText value="#{car.board}" style="font-size: 12px;" />
+
+                                    </p:column>
+                                </p:dataTable><br/>
+                                <p:inputText id="txt1" size="35">
+                                    <p:watermark for="txt1" value="College Lookup"/>
+                                </p:inputText>  
+                                <div class="regmoharto">
+                                    <h:graphicImage value="../resources/images/pages/santae.png" height="100px" width="245px;"/>
+                                </div>
+                                <div class="askaq">
+                                  <!--  <h:graphicImage value="../resources/images/pages/capture.png" height="195px" width="244px" style="border: 1px solid;"/> -->
+                                </div>
+
+                                <div class="ad_right">
+                                    <h:graphicImage value="../resources/images/pages/ielts.png"  width="245px" height="300"/>
+                                </div>
+
+                            </div> 
+                            <div class="container2">
+                                <p:panel style="font-size: 12px;border: none;" header="SCHOOLS UNDER MOHARTO" styleClass="cpanel" >
+                                    <h:form id="fmid">
+                                        <p:dataGrid var="sch" value="#{schoolBean.school}" paginator="true" paginatorPosition="bottom" columns="1" rows="6" styleClass="dg">
+                                            <h:panelGrid columns="2">
+                                                <h:graphicImage url="../resources/images/pages/#{sch.schoollogo}" height="100px"  width="100px" style="border: 1px solid #ddd;"/>
+                                                <h:panelGrid columns="1">
+                                                    <h:outputText value="#{sch.schoolname}, #{sch.schoolcity}" style="color:  #49a4c8;font-size: 15px;font-weight: bold;" />
+                                                        <p:rating  value="#{sch.rating}" readonly="true" />
+                                                        <div style="margin-top: 5px;">
+                                                        <h:outputText value="#{sch.affiliated}" />
+                                                        </div>
+                                                        <!--    <h:outputText value="Admissions done :#{sch.admissions}" /> -->                                  
+         
+                                                        <h:panelGrid columns="2" style="">
+
+                                                            <a href="microsite_home.xhtml" style="color: #990000;padding-right: 20px; text-decoration: none;">View More</a>
+                                                        <a href="microsite_courses_offered.xhtml" style="color: #990000;padding-right: 20px; text-decoration: none;">Check Seats Availability</a>
+
+                                                    </h:panelGrid>
+                                                </h:panelGrid>
+
+                                            </h:panelGrid>
+                                        </p:dataGrid>
+                                    </h:form>
+                                </p:panel>
+                            </div>
+
+                            <div class="container3">
+                                <div>
+                                    <h:graphicImage value="../resources/images/pages/ad3.png" width="230" height="228"/>
+                                </div>
+
+                                <div class="featcolleges">
+                                    <h:graphicImage value="../resources/images/pages/capture.png" height="215" width="230" style="border: 1px solid;"/>
+
+                                </div>
+
+                                <div class="ad_right">
+                                    <h:graphicImage value="../resources/images/pages/ad4.png" height="315" width="230"/>
+                                </div>
+
+                            </div>
+
+                            <div class="clear"/>
+
+                            <div class="ads_bottom" style="margin-top: 10px;">
+                                <div class="ad_btm1">
+                                    <h:graphicImage value="../resources/images/pages/mba.png"  width="332" height="140"/>
+                                </div>
+
+                                <div class="ad_btm2">
+                                    <h:graphicImage value="../resources/images/pages/grad.png"  width="377" height="140"/>
+                                </div>
+
+                                <div class="ad_btm3">
+                                    <h:graphicImage value="../resources/images/pages/jp.png"  width="230"  height="140"/>
+                                </div>
+
+                            </div>
+                    </div>
+                </f:view>
+            </ui:define>
+        </ui:composition>
+    </html>

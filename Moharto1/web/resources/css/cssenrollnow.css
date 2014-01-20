@@ -1,0 +1,24 @@
+
+.main
+{
+    width: 980px;
+    height: auto;
+/*    border: 1px solid #ddd;*/
+    margin-left: 185px;
+    
+}
+.one{
+    width: 670px;
+/*        border: 1px solid #ddd;*/
+         height: auto;
+             float: left;
+         
+}
+.two
+{
+    float: left;
+        width: 240px;
+/*           border: 1px solid red;*/
+           height: auto;
+           margin-left: 42px;
+}

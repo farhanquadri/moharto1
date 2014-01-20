@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title></title>
+       
+        <h:outputStylesheet library="css" name="EnrolmentHistory.css"/>
+        <h:outputStylesheet library="css" name="college_dashboard.css"/>
+        <h:outputStylesheet library="css" name="commoncontentstyle.css"/>
+
+    </h:head>
+
+    <ui:composition template="/template/commonTemplate.xhtml">
+
+        <ui:define name='pageContent'>
+            <h:form>
+                <h:body>
+
+                    <div class="mainContainer" style="width: 980px;height:auto;margin: 0px auto;margin-top: 10px;">
+                       
+                        
+                        <div style="border: 1px solid #ddd; width: 520px; height: 300px;border-radius: 4px;">
+                            
+                            <div class="pagetitle">
+                                Video Tour
+                            </div>
+                            
+                            <p:media value="http://www.youtube.com/v/KZnUr8lcqjo" width="500;" height="250" player="flash"  style="margin-left: 10px;
+                                 margin-top: 10px;margin-bottom: 6px;border-radius: 10px;"/>
+                            
+                        </div>
+                        
+                        
+                    </div>
+                </h:body>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</html>
+

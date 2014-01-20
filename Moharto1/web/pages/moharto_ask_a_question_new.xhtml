@@ -1,0 +1,420 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <h:outputStylesheet library="css" name="ask_a_question_new.css"/>
+
+    </h:head>
+    <ui:composition template="/template/commonTemplate.xhtml">
+
+        <ui:define name='pageContent'>
+       
+        <div class="main">
+             <h:form>
+            <div class="first1">
+                <div class="welcome">
+                <h:outputText value="Welcome,guest" style="margin-top: 10px;"/>
+                </div>
+                 <div class="welcome3">
+                <h:commandLink value="signin" style="text-decoration: none;color: dodgerblue;"/></div>
+            </div>
+            <div class="second1">
+                <p:inputText id="question" size="45" style="margin-top: 8px;margin-left: 31px;">
+                    <p:watermark for="question" value="Ask your question"/>
+                </p:inputText><br/>
+                <p:commandButton value="Submit my question" style="margin-top: 11px;margin-left: 185px;height: 28px;"/>
+                <p:graphicImage value="../resources/images/pages/questionmark.png" style="margin-left: 293px;margin-top: -30px;margin-bottom: -14px;"/>
+            </div>
+            <div class="third1">
+                <p:graphicImage value="../resources/images/pages/q1.png" width="25" height="25" style="margin-left: 10px;margin-top: 5px;"/>
+                <div class="welcome1">
+                    <h:commandLink value="Can i join MBA without attending MAT/CAT exam?" action="QuesAns" style="margin-left: 10px; text-decoration: none;color: dodgerblue;font-size: 13px;"/>
+                </div>
+                <div class="time">
+                    <h:outputText value="2 hours ago" style="font-size: 12px;"/>
+                </div>
+                <div class="time1">
+                    <h:commandLink value="rajendra" style=" text-decoration: none;margin-left: -17px;" />
+                    <p:graphicImage value="../resources/images/pages/22.png" style="margin-left: 10px;margin-top: 7px;"/>
+                </div>
+        </div>
+                 <div class="third1">
+                <p:graphicImage value="../resources/images/pages/q1.png" width="25" height="25" style="margin-left: 10px;margin-top: 5px;"/>
+                <div class="welcome1">
+                    <h:commandLink value="I want to study diploma. how much will be the cost?" style="margin-left: 10px; text-decoration: none;color: dodgerblue;font-size: 13px;"/>
+                </div>
+                <div class="time">
+                    <h:outputText value="25-11-2013" style="font-size: 12px;"/>
+                </div>
+                <div class="time1">
+                    <h:commandLink value="rajendra" style=" text-decoration: none;margin-left: -17px;" />
+                    <p:graphicImage value="../resources/images/pages/22.png" style="margin-left: 10px;margin-top: 7px;"/>
+                </div>
+        </div>
+                       <div class="third1">
+                <p:graphicImage value="../resources/images/pages/q1.png" width="25" height="25" style="margin-left: 10px;margin-top: 5px;"/>
+                <div class="welcome1">
+                    <h:commandLink value="How can i take admission through lateral entery?" style="margin-left: 10px; text-decoration: none;color: dodgerblue;font-size: 13px;"/>
+                </div>
+                <div class="time">
+                    <h:outputText value="23-11-2013" style="font-size: 12px;"/>
+                </div>
+                <div class="time1">
+                    <h:commandLink value="rajendra" style=" text-decoration: none;margin-left: -17px;" />
+                    <p:graphicImage value="../resources/images/pages/22.png" style="margin-left: 10px;margin-top: 7px;"/>
+                </div>
+        </div>
+                       <div class="third1">
+                <p:graphicImage value="../resources/images/pages/q1.png" width="25" height="25" style="margin-left: 10px;margin-top: 5px;"/>
+                <div class="welcome1">
+                    <h:commandLink value="Can i study diploma civil engineering through distance?" style="margin-left: 10px; text-decoration: none;color: dodgerblue;font-size: 13px;"/>
+                </div>
+                <div class="time">
+                    <h:outputText value="20-11-2013" style="font-size: 12px;"/>
+                </div>
+                <div class="time1">
+                    <h:commandLink value="rajendra" style=" text-decoration: none;margin-left: -17px;" />
+                    <p:graphicImage value="../resources/images/pages/22.png" style="margin-left: 10px;margin-top: 7px;"/>
+                </div>
+        </div>
+                   <div class="third1">
+                <p:graphicImage value="../resources/images/pages/q1.png" width="25" height="25" style="margin-left: 10px;margin-top: 5px;"/>
+                <div class="welcome1">
+                    <h:commandLink value="how much rank i need to join diploma?" style="margin-left: 10px; text-decoration: none;color: dodgerblue;font-size: 13px;"/>
+                </div>
+                <div class="time">
+                    <h:outputText value="14-11-2013" style="font-size: 12px;"/>
+                </div>
+                <div class="time1">
+                    <h:commandLink value="rajendra" style=" text-decoration: none;margin-left: -17px;" />
+                    <p:graphicImage value="../resources/images/pages/22.png" style="margin-left: 10px;margin-top: 7px;"/>
+                </div>
+        </div>
+                  <div class="third1">
+                <p:graphicImage value="../resources/images/pages/q1.png" width="25" height="25" style="margin-left: 10px;margin-top: 5px;"/>
+                <div class="welcome1">
+                    <h:commandLink value="what is the last year closing rank?" style="margin-left: 10px; text-decoration: none;color: dodgerblue;font-size: 13px;"/>
+                </div>
+                <div class="time">
+                    <h:outputText value="10-11-2013" style="font-size: 12px;"/>
+                </div>
+                <div class="time1">
+                    <h:commandLink value="rajendra" style=" text-decoration: none;margin-left: -17px;" />
+                    <p:graphicImage value="../resources/images/pages/22.png" style="margin-left: 10px;margin-top: 7px;"/>
+                </div>
+        </div>
+                 <div class="third1">
+                <p:graphicImage value="../resources/images/pages/q1.png" width="25" height="25" style="margin-left: 10px;margin-top: 5px;"/>
+                <div class="welcome1">
+                    <h:commandLink value="Send me the fee course?" style="margin-left: 10px; text-decoration: none;color: dodgerblue;font-size: 13px;"/>
+                </div>
+                <div class="time">
+                    <h:outputText value="7-11-2013" style="font-size: 12px;"/>
+                </div>
+                <div class="time1">
+                    <h:commandLink value="rajendra" style=" text-decoration: none;margin-left: -17px;" />
+                    <p:graphicImage value="../resources/images/pages/22.png" style="margin-left: 10px;margin-top: 7px;"/>
+                </div>
+        </div>
+                 <div class="third1">
+                <p:graphicImage value="../resources/images/pages/q1.png" width="25" height="25" style="margin-left: 10px;margin-top: 5px;"/>
+                <div class="welcome1">
+                    <h:commandLink value="can i get direct admission?" style="margin-left: 10px; text-decoration: none;color: dodgerblue;font-size: 13px;"/>
+                </div>
+                <div class="time">
+                    <h:outputText value="6-11-2013" style="font-size: 12px;"/>
+                </div>
+                <div class="time1">
+                    <h:commandLink value="rajendra" style=" text-decoration: none;margin-left: -17px;" />
+                    <p:graphicImage value="../resources/images/pages/22.png" style="margin-left: 10px;margin-top: 7px;"/>
+                </div>
+        </div>
+                 <div class="third1">
+                <p:graphicImage value="../resources/images/pages/q1.png" width="25" height="25" style="margin-left: 10px;margin-top: 5px;"/>
+                <div class="welcome1">
+                    <h:commandLink value="I want to know admission procedure?" style="margin-left: 10px; text-decoration: none;color: dodgerblue;font-size: 13px;"/>
+                </div>
+                <div class="time">
+                    <h:outputText value="4-11-2013" style="font-size: 12px;"/>
+                </div>
+                <div class="time1">
+                    <h:commandLink value="rajendra" style=" text-decoration: none;margin-left: -17px;" />
+                    <p:graphicImage value="../resources/images/pages/22.png" style="margin-left: 10px;margin-top: 7px;"/>
+                </div>
+        </div>
+                 <div class="third1">
+                <p:graphicImage value="../resources/images/pages/q1.png" width="25" height="25" style="margin-left: 10px;margin-top: 5px;"/>
+                <div class="welcome1">
+                    <h:commandLink value="I want to know admission procedure?" style="margin-left: 10px; text-decoration: none;color: dodgerblue;font-size: 13px;"/>
+                </div>
+                <div class="time">
+                    <h:outputText value="4-11-2013" style="font-size: 12px;"/>
+                </div>
+                <div class="time1">
+                    <h:commandLink value="rajendra" style=" text-decoration: none;margin-left: -17px;" />
+                    <p:graphicImage value="../resources/images/pages/22.png" style="margin-left: 10px;margin-top: 7px;"/>
+                </div>
+        </div>
+                 <div class="third1">
+                <p:graphicImage value="../resources/images/pages/q1.png" width="25" height="25" style="margin-left: 10px;margin-top: 5px;"/>
+                <div class="welcome1">
+                    <h:commandLink value="I want to know admission procedure?" style="margin-left: 10px; text-decoration: none;color: dodgerblue;font-size: 13px;"/>
+                </div>
+                <div class="time">
+                    <h:outputText value="2-11-2013" style="font-size: 12px;"/>
+                </div>
+                <div class="time1">
+                    <h:commandLink value="rajendra" style=" text-decoration: none;margin-left: -17px;" />
+                    <p:graphicImage value="../resources/images/pages/22.png" style="margin-left: 10px;margin-top: 7px;"/>
+                </div>
+        </div>
+                 <div class="second2">
+<!--                     <h3 style="margin-top: 2px;
+                                margin-left: 57px;
+                                ">I want to do</h3>
+                            <h:panelGrid columns="2">
+                                <p:tabView id="tv" effect="slide" style="width: 226px;
+                                           font-size: 14px;
+                                           margin-left: -5px;
+                                           margin-top: -5px;
+                                           ">
+                                    <p:tab id="pgtab" title="PG"  >
+                                        <h:form>
+                                            <h:panelGrid columns="1" style="text-align: left;">
+                                                <p:selectOneMenu id="selcourse" style="width:150px;" >
+                                                    <f:selectItem itemLabel="Select Course" itemValue=""/>
+                                                    <f:selectItem itemLabel="M.COM" itemValue="M.COM"/>
+                                                    <f:selectItem itemLabel="M.TECH" itemValue="M.TECH"/>
+                                                    <f:selectItem itemLabel="MBA" itemValue="MBA"/>
+                                                </p:selectOneMenu>
+                                                <p:selectOneMenu id="selcity"  style="width:150px;">
+                                                    <f:selectItem itemLabel="Select City" itemValue=""/>
+                                                    <f:selectItem itemLabel="Bangalore" itemValue="Bangalore"/>
+                                                    <f:selectItem itemLabel="chennai" itemValue="chennai"/>
+                                                    <f:selectItem itemLabel="Kochi" itemValue="Kochi"/>
+                                                </p:selectOneMenu>
+                                            </h:panelGrid>
+                                            <p:commandButton value="GO" update="sa" />
+                                            <h:outputText id="sa" value="#{myBean.password}"/>
+                                        </h:form>
+                                    </p:tab>
+                                    <p:tab id="ugtab" title="UG" >
+                                        <h:form>
+                                            <h:panelGrid columns="1" style="text-align: left;">
+                                                <p:selectOneMenu id="selcourse" style="width:150px;" >
+                                                    <f:selectItem itemLabel="Select Course" itemValue=""/>
+                                                    <f:selectItem itemLabel="B.COM" itemValue="B.COM"/>
+                                                    <f:selectItem itemLabel="B.TECH" itemValue="B.TECH"/>
+                                                    <f:selectItem itemLabel="BBA" itemValue="BBA"/>
+                                                </p:selectOneMenu>
+                                                <p:selectOneMenu id="selcity" style="width:150px;">
+                                                    <f:selectItem itemLabel="Select City" itemValue=""/>
+                                                    <f:selectItem itemLabel="Bangalore" itemValue="Bangalore"/>
+                                                    <f:selectItem itemLabel="chennai" itemValue="chennai"/>
+                                                    <f:selectItem itemLabel="Kochi" itemValue="Kochi"/>
+                                                </p:selectOneMenu>
+                                            </h:panelGrid>
+                                            <p:commandButton value="GO" update="sa" />
+                                            <h:outputText id="sa" value=" #{myBean.password}"/>
+                                        </h:form>
+                                    </p:tab>
+                                    <p:tab id="aftr10tab" title="AFTER 10" >
+                                        <h:form>
+                                            <h:panelGrid columns="1" style="text-align: left;">
+                                                <p:selectOneMenu id="selcourse" style="width:150px;" >
+                                                    <f:selectItem itemLabel="Select Course" itemValue=""/>
+                                                    <f:selectItem itemLabel="PUC" itemValue="PUC"/>
+                                                    <f:selectItem itemLabel="DIPLOMA" itemValue="DIPLOMA"/>
+                                                    <f:selectItem itemLabel="I.T.I" itemValue="I.T.I"/>
+                                                </p:selectOneMenu>
+                                                <p:selectOneMenu id="selcity"  style="width:150px;">
+                                                    <f:selectItem itemLabel="Select City" itemValue=""/>
+                                                    <f:selectItem itemLabel="Bangalore" itemValue="Bangalore"/>
+                                                    <f:selectItem itemLabel="chennai" itemValue="chennai"/>
+                                                    <f:selectItem itemLabel="Kochi" itemValue="Kochi"/>
+                                                </p:selectOneMenu>
+                                            </h:panelGrid>
+                                            <p:commandButton value="GO" update="sa" />
+                                            <h:outputText id="sa" value=" #{myBean.password}"/>
+                                        </h:form>
+                                    </p:tab>
+                                </p:tabView>
+                            </h:panelGrid>-->
+ <p:panel header="I Want To Do" style="text-align: center;font-size: 12px;" styleClass="admission_panel" >
+                            <h:panelGrid columns="2" >
+                                <p:tabView id="tv" style="padding-left: 0px;padding-right: 0px;border: 0px;"  effect="slide">
+                                    <p:tab id="pgtab" title="AFTER 10" titleStyleClass="tab1">
+                                        <h:form>
+                                            <h:panelGrid columns="1" style="text-align: left;">
+                                                 <p:selectOneMenu id="selcourse" value="#{myBean.username}" style="width:150px;" effect="fold" filter="true" filterMatchMode="startsWith" >
+                                                <f:selectItem itemLabel="PUC" itemValue="22"/>
+                                                <f:selectItem itemLabel="Diploma" itemValue="23"/>
+                                                <f:selectItem itemLabel="ITI" itemValue="24"/>
+                                                <f:selectItem itemLabel="Nursing" itemValue="24"/>
+                                            </p:selectOneMenu>
+                                           <p:selectOneMenu id="selcity" value="#{myBean.username}" style="width:150px;" effect="fold" filter="true" filterMatchMode="startsWith" >
+                                                <f:selectItem itemLabel="Bangalore" itemValue="Bangalore"/>
+                                                <f:selectItem itemLabel="chennai" itemValue="chennai"/>
+                                                <f:selectItem itemLabel="Kochi" itemValue="Kochi"/>
+                                                <f:selectItem itemLabel="Hubli-Dharwad" itemValue="hubli-dwd"/>
+                                                <f:selectItem itemLabel="Mysore" itemValue="mysore"/>
+                                                <f:selectItem itemLabel="Mangalore" itemValue="mangalore"/>
+                                                <f:selectItem itemLabel="Hyderabad" itemValue="hyderabad"/>
+                                                <f:selectItem itemLabel="Mumbai" itemValue="mumbai"/>
+                                                <f:selectItem itemLabel="Ahmedabad" itemValue="ahmedabad"/>
+                                                <f:selectItem itemLabel="Pune" itemValue="pune"/>
+                                                <f:selectItem itemLabel="Davangere" itemValue="davangere"/>
+                                                <f:selectItem itemLabel="Belgaum" itemValue="belgaum"/>
+                                                <f:selectItem itemLabel="Bijapur" itemValue="bijapur"/>
+                                                <f:selectItem itemLabel="Gulbarga" itemValue="gulbarga"/>
+                                            </p:selectOneMenu>
+                                            </h:panelGrid>
+                                            <p:commandButton value="GO" update="sa" />
+                                            <h:outputText id="sa" value="#{myBean.password}"/>
+                                        </h:form>
+                                    </p:tab>
+                                    <p:tab id="ugtab" title="UG" titleStyleClass="tab2">
+                                        <h:form>
+                                            <h:panelGrid columns="1" style="text-align: left;" >
+                                               <p:selectOneMenu id="selcourse" value="#{myBean.username}" style="width:150px;" effect="fold" filter="true" filterMatchMode="startsWith">
+                                                <f:selectItem itemLabel="B.E" itemValue="M.COM"/>
+                                                <f:selectItem itemLabel="B.Tech" itemValue="M.TECH"/>
+                                                <f:selectItem itemLabel="B.B.M" itemValue="M.COM"/>
+                                                <f:selectItem itemLabel="B.B.A" itemValue="M.TECH"/>
+                                                <f:selectItem itemLabel="B.Com" itemValue="MBA"/>
+                                                <f:selectItem itemLabel="B.C.A" itemValue="M.COM"/>
+                                                <f:selectItem itemLabel="B.C.S" itemValue="M.TECH"/>
+                                                <f:selectItem itemLabel="B.D.S" itemValue="MBA"/>
+                                                <f:selectItem itemLabel="B.Ed" itemValue="M.COM"/>
+                                                <f:selectItem itemLabel="B.F.Tech" itemValue="M.TECH"/>
+                                                <f:selectItem itemLabel="B.H.M" itemValue="MBA"/>
+                                                <f:selectItem itemLabel="B.L" itemValue="M.COM"/>
+                                                <f:selectItem itemLabel="B.Pharma" itemValue="M.TECH"/>
+                                                <f:selectItem itemLabel="B.Sc.Ed" itemValue="M.COM"/>
+                                                <f:selectItem itemLabel="B.Sc" itemValue="M.TECH"/>
+                                                <f:selectItem itemLabel="B.V.Sc" itemValue="MBA"/>
+                                                <f:selectItem itemLabel="B.A. B.Ed" itemValue="M.COM"/>
+                                                <f:selectItem itemLabel="B.A.LLB" itemValue="M.TECH"/>
+                                                <f:selectItem itemLabel="B.C.J" itemValue="MBA"/>
+                                                <f:selectItem itemLabel="B.F.I.A" itemValue="M.COM"/>
+                                                <f:selectItem itemLabel="B.H.M.S" itemValue="M.TECH"/>
+                                                <f:selectItem itemLabel="B.V.Sc" itemValue="MBA"/>
+                                                <f:selectItem itemLabel="B.D.S" itemValue="MBA"/>
+                                                <f:selectItem itemLabel="B.P.ED" itemValue="M.COM"/>
+                                                <f:selectItem itemLabel="B.Lit" itemValue="M.TECH"/>
+                                                <f:selectItem itemLabel="B.Des" itemValue="MBA"/>
+                                            </p:selectOneMenu>
+                                                <p:selectOneMenu id="selcity" value="#{myBean.username}" style="width:150px;" effect="fold" filter="true" filterMatchMode="startsWith" >
+                                                <f:selectItem itemLabel="Bangalore" itemValue="Bangalore"/>
+                                                <f:selectItem itemLabel="chennai" itemValue="chennai"/>
+                                                <f:selectItem itemLabel="Kochi" itemValue="Kochi"/>
+                                                <f:selectItem itemLabel="Hubli-Dharwad" itemValue="hubli-dwd"/>
+                                                <f:selectItem itemLabel="Mysore" itemValue="mysore"/>
+                                                <f:selectItem itemLabel="Mangalore" itemValue="mangalore"/>
+                                                <f:selectItem itemLabel="Hyderabad" itemValue="hyderabad"/>
+                                                <f:selectItem itemLabel="Mumbai" itemValue="mumbai"/>
+                                                <f:selectItem itemLabel="Ahmedabad" itemValue="ahmedabad"/>
+                                                <f:selectItem itemLabel="Pune" itemValue="pune"/>
+                                                <f:selectItem itemLabel="Davangere" itemValue="davangere"/>
+                                                <f:selectItem itemLabel="Belgaum" itemValue="belgaum"/>
+                                                <f:selectItem itemLabel="Bijapur" itemValue="bijapur"/>
+                                                <f:selectItem itemLabel="Gulbarga" itemValue="gulbarga"/>
+                                            </p:selectOneMenu>
+                                            </h:panelGrid>
+                                            <p:commandButton value="GO" update="sa" />
+                                            <h:outputText id="sa" value=" #{myBean.password}"/>
+                                        </h:form>
+                                    </p:tab>
+                                    <p:tab id="aftr10tab" title="PG" titleStyle="tab3">
+                                        <h:form>
+                                            <h:panelGrid columns="1" style="text-align: left;">
+                                                
+                                                <p:selectOneMenu id="selcourse" value="#{myBean.username}" style="width:150px;" effect="fold" filter="true" filterMatchMode="startsWith" >
+                                                <f:selectItem itemLabel="M.B.A" itemValue="M.COM"/>
+                                                <f:selectItem itemLabel="M.A" itemValue="M.TECH"/>
+                                                <f:selectItem itemLabel="M.Com" itemValue="MBA"/>
+                                                <f:selectItem itemLabel="M.C.A" itemValue="M.COM"/>
+                                                <f:selectItem itemLabel="M.Ed" itemValue="M.TECH"/>
+                                                <f:selectItem itemLabel="M.E" itemValue="MBA"/>
+                                                <f:selectItem itemLabel="M.Sc" itemValue="M.COM"/>
+                                                <f:selectItem itemLabel="M.Tech" itemValue="M.TECH"/>
+                                                <f:selectItem itemLabel="LL.M" itemValue="MBA"/>
+                                                <f:selectItem itemLabel="M.L" itemValue="M.COM"/>
+                                                <f:selectItem itemLabel="M.Pharma" itemValue="M.TECH"/>
+                                                <f:selectItem itemLabel="M.Phil" itemValue="MBA"/>
+                                                <f:selectItem itemLabel="M.D.S" itemValue="MBA"/>
+                                                <f:selectItem itemLabel="M.A.M" itemValue="M.COM"/>
+                                                <f:selectItem itemLabel="M.H.M" itemValue="M.TECH"/>
+                                                <f:selectItem itemLabel="M.H.H.M" itemValue="MBA"/>
+
+                                            </p:selectOneMenu>
+                                                 <p:selectOneMenu id="selcity" value="#{myBean.username}" style="width:150px;" effect="fold" filter="true" filterMatchMode="startsWith" >
+                                                <f:selectItem itemLabel="Bangalore" itemValue="Bangalore"/>
+                                                <f:selectItem itemLabel="chennai" itemValue="chennai"/>
+                                                <f:selectItem itemLabel="Kochi" itemValue="Kochi"/>
+                                                <f:selectItem itemLabel="Hubli-Dharwad" itemValue="hubli-dwd"/>
+                                                <f:selectItem itemLabel="Mysore" itemValue="mysore"/>
+                                                <f:selectItem itemLabel="Mangalore" itemValue="mangalore"/>
+                                                <f:selectItem itemLabel="Hyderabad" itemValue="hyderabad"/>
+                                                <f:selectItem itemLabel="Mumbai" itemValue="mumbai"/>
+                                                <f:selectItem itemLabel="Ahmedabad" itemValue="ahmedabad"/>
+                                                <f:selectItem itemLabel="Pune" itemValue="pune"/>
+                                                <f:selectItem itemLabel="Davangere" itemValue="davangere"/>
+                                                <f:selectItem itemLabel="Belgaum" itemValue="belgaum"/>
+                                                <f:selectItem itemLabel="Bijapur" itemValue="bijapur"/>
+                                                <f:selectItem itemLabel="Gulbarga" itemValue="gulbarga"/>
+                                            </p:selectOneMenu>
+                                            </h:panelGrid>
+                                            <p:commandButton value="GO" update="sa" />
+                                            <h:outputText id="sa" value=" #{myBean.password}"/>
+                                        </h:form>
+                                    </p:tab>
+                                </p:tabView>
+                            </h:panelGrid>
+                        </p:panel>
+                     
+                 </div>
+                 <div class="second3">
+<!--                          <p:commandLink value="Download Prospectus" style="float: left;
+                                               color: brown;
+                                               font-size: 15px;
+                                               margin-left: 38px;
+                                               margin-top:17px;"/>-->
+ <p:panel header="TESTIMONIALS" style="height: 220px;
+                                         width: 224px;
+                                         float: left;
+                                         font-size: 12px;
+                                         margin-left: 1px;
+                                         ">
+                                    <h:panelGrid columns="1">
+                                        "I have successfully completed my MBA marketing education course in 2011 and got placed in a very good Reputed company. It was good with the college hostel facilities and campus."
+
+                                        <div style="float: left;">
+                                            <h:panelGrid columns="2">
+                                                <h:graphicImage url="../resources/images/pages/name1.jpg" height="75px" width="75px"/>
+                                                <h:panelGrid columns="1">
+                                                    <h:outputText value="Osion Brian" style="font-style: italic;color: darkturquoise;" /> 
+                                                    <h:outputText value="-PSIT, Bangalore" style="font-style: italic" /> 
+                                                </h:panelGrid>
+                                            </h:panelGrid>
+                                        </div>   
+                                    </h:panelGrid>
+                                </p:panel>
+                     </div>
+                 <div class="second4"> 
+                  <h:graphicImage value="../resources/images/pages/Untitled.png" style="float: left;
+                                                width: 230px;
+                                                height: 480px;
+                                                margin-left: 1px;
+                                                }"/></div>
+        </h:form></div>
+            </ui:define>
+        
+    </ui:composition>
+    
+</html>
+

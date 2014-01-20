@@ -1,0 +1,17 @@
+.scholarships_maincontainer{
+    padding-top: 15px;
+    margin: 0 auto;
+    width: 980px;
+    padding-bottom: 15px;
+}
+
+.scholarships_leftcontainer{
+   min-width: 740px;
+   float: left;
+}
+
+.scholarships_rightcontainer{
+    
+    float: left;
+    width: 230px
+}

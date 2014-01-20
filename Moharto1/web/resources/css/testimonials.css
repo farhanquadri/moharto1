@@ -1,0 +1,56 @@
+.maincontainer{
+
+  margin: 0 auto;
+  width: 980px; 
+}
+
+.heading_top{
+    width: 100%
+}
+.container_left{
+    width: 680px;
+
+}
+.testinomial_container{
+  border: 1px solid #ddd;
+}
+
+.testinomial_text{
+    width: 670px;
+    height: 279px;
+}
+
+.testinomial_vid{
+     
+    width: 670px; 
+    margin-bottom: 20px;
+}
+
+.ads_bottom{
+    margin-top: 15px;
+    width: 680px;
+}
+
+.container_right{
+ float: right;
+ width: 274px;
+ 
+}
+
+.regpanel .ui-panel-titlebar{
+width: 189px;
+margin: 0 auto;
+background: #0066FF;
+color: white;
+margin-left: 33px;
+text-align: center;
+border-radius: 14px 0px;
+}
+
+.regpanel .ui-widget-header{
+    text-shadow:none;
+}
+.registration{
+    float: right;
+    border: 0px;
+}

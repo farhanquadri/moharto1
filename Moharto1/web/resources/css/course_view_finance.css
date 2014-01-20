@@ -1,0 +1,30 @@
+
+.main
+{
+    width: 980px;
+height: auto;
+/*    border: 1px solid black;*/
+        margin-left: 185px;
+}
+.fin1
+{float: left;
+width: 231px;
+height: auto;
+/*border: 1px solid red;*/
+}
+.fin2{
+   float: left;
+width: 740px;
+height: auto;
+margin-left: 237px;
+/*border: 1px solid blue;*/
+margin-top: -50px;
+    
+}
+.heads
+{
+    float: left;
+font-weight: bold;
+font-size: 14px;
+
+}
